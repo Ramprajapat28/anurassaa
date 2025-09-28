@@ -17,11 +17,11 @@ export default function Navbar() {
 
   return (
     <motion.div 
-      className="fixed top-0 left-0 right-0 z-50 bg-[#0a260a]/95 backdrop-blur-lg transition-all duration-300"
+      className="fixed top-0  absolute left-0 right-0 z-5  backdrop-blur-lg transition-all duration-300"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
     >
-      <div className="flex items-center justify-around px-8 py-4 max-w-7xl mx-auto">
+      <div className="flex items-center justify-around gap-100 px-8 py-4 max-w-7xl mx-auto">
         
        
 
@@ -31,7 +31,7 @@ export default function Navbar() {
             <motion.div
               className="flex space-x-8"
               initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 100, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ duration: 0.4 }}
             >
@@ -48,7 +48,7 @@ export default function Navbar() {
           )}
         </AnimatePresence>
          <motion.div
-          className="text-white text-2xl  justify-center font-semibold tracking-wide"
+          className="text-white text-6xl z-100 justify-center font-bold leading-tight tracking-wide cursor-pointer"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
