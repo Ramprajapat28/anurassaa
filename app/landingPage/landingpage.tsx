@@ -7,7 +7,7 @@ import Contact from "@/components/Contact"
 
 export default function Page() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar />
       <HeroSection />
       <Content />

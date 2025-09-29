@@ -36,7 +36,7 @@ export default function Content() {
               // viewport={{  amount: 0.3 }}
             >
               <motion.h2
-                className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black text-[#f8f887] mb-2 sm:mb-3 lg:mb-4"
+                className="text-3xl xs:text-4xl md:text-center  sm:text-5xl lg:text-6xl font-black text-[#f8f887] mb-2 sm:mb-3 lg:mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -45,7 +45,7 @@ export default function Content() {
                 FERMENTED,
               </motion.h2>
               <motion.p
-                className="text-lg xs:text-xl sm:text-2xl font-medium mb-4 sm:mb-6 lg:mb-8"
+                className="text-lg xs:text-xl md:text-center  sm:text-2xl font-medium mb-4 sm:mb-6 lg:mb-3"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
@@ -54,7 +54,7 @@ export default function Content() {
                 NOT FORTIFIED.
               </motion.p>
               <motion.p
-                className="text-base sm:text-lg leading-relaxed mb-4 lg:mb-6"
+                className="text-base sm:text-xl md:text-2xl font-thin  md:text-center leading-relaxed tracking-widest mb-4 lg:mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
@@ -73,7 +73,7 @@ export default function Content() {
             transition={{ duration: 0.8, delay: 0.5 }}
             // viewport={{ once: true, amount: 0.5 }}
           >
-            <p className="text-white text-sm sm:text-base lg:text-lg leading-relaxed px-2 sm:px-4 lg:px-0">
+            <p className="text-white sm:text-lg  lg:text-2xl leading-relaxed px-2 sm:px-4 lg:px-0">
               Anurassaa delivers probiotic strains like
               Lactobacillus directly from its fermentation process
               without any additives. These beneficial microbes
@@ -97,7 +97,7 @@ export default function Content() {
               // viewport={{ once: true, amount: 0.3 }}
             >
               <motion.h2
-                className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black text-[#f8f887] mb-2 sm:mb-3 lg:mb-4"
+                className="text-3xl xs:text-4xl  md:text-center sm:text-5xl lg:text-6xl font-black text-[#f8f887] mb-2 sm:mb-3 lg:mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -106,7 +106,7 @@ export default function Content() {
                 DIGESTION
               </motion.h2>
               <motion.p
-                className="text-lg xs:text-xl sm:text-2xl font-medium mb-4 sm:mb-6 lg:mb-8"
+                className="text-lg xs:text-xl sm:text-2xl md:text-center font-bold mb-4 sm:mb-6 lg:mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -115,7 +115,7 @@ export default function Content() {
                 MADE EFFORTLESS,
               </motion.p>
               <motion.p
-                className="text-base sm:text-lg leading-relaxed mb-4 lg:mb-6"
+                className="text-base   md:text-center sm:text-lg md:text-2xl font-thin tracking-widest leading-relaxed mb-4 lg:mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
@@ -153,7 +153,7 @@ export default function Content() {
             transition={{ duration: 0.8, delay: 0.6 }}
             
           >
-            <p className="text-white text-sm sm:text-base lg:text-lg leading-relaxed px-2 sm:px-4 lg:px-0">
+            <p className="text-white  sm:text-lg lg:text-2xl leading-relaxed px-2 sm:px-4 lg:px-0">
               Anurassaa's naturally fermented protein is gentle on
               your gut. With high solubility and nitrogen index,
               it mixes easily and is well-tolerated — unlike many
