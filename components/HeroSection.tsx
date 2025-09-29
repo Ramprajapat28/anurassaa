@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <div className="relative h-screen flex items-center  overflow-hidden bg-[#E5903D]">
+    <div className="relative h-screen w-full flex items-center  overflow-hidden bg-[#E5903D]">
       {/* Background Image */}
       <div className="absolute inset-0  ">
         <img 
           src={"/hero/hero1.svg"} 
           alt="hero background" 
-          className="w-full opacity-40 right-[-10%] h-full object-cover "
+          className="w-full opacity-40  h-full object-cover "
         />
         <div className="absolute  inset-0 bg-gradient-to-r from-[#E5903D] via-transparent to-[#E5903D]/80" />
       </div>
