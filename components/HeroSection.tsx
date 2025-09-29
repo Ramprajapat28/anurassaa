@@ -17,11 +17,11 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative  left-0 px-8 pl-6 md:pl-16 max-w-4xl">
+ <div className="relative  left-0 px-8 pl-6 md:pl-16 max-w-4xl">
         <motion.h1
           className="text-[52px]  md:text-6xl lg:text-8xl text-left font-black text-[#FAF6C6] mb-6 leading-tight"
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           
         >
@@ -31,12 +31,12 @@ export default function HeroSection() {
         <motion.p
           className="text-xl md:text-4xl text-left text-[#FAF6C6] font-medium "
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+         whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.0, delay: 0.8 }}
         >
           FOR YOUR BODY AND THE PLANET
         </motion.p>
-      </div>
+      </div>     
     </div>
   );
 }
