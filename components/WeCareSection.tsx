@@ -3,9 +3,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { motion, useScroll, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+// import { Menu, X } from "lucide-react";
 
-export default function Navbar() {
+export default function WeCareSection() {
     const [showFinger, setShowFinger] = useState(false);
 
     useEffect(() => {
