@@ -40,7 +40,7 @@ export default function Navbar() {
             {scrolled && (
               <motion.a
                 href="#about"
-                className="text-white hover:text-[#f8f887] transition-colors cursor-pointer text-lg lg:text-base"
+                className="text-white hover:text-[#f8f887] transition-colors cursor-pointer text-lg lg:text-2xl"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -55,9 +55,9 @@ export default function Navbar() {
         </div>
 
         {/* Logo - Center */}
-        <div className="flex-1 left-0 right-0 flex justify-center w-fit mx-auto">
+        <div className="flex-1 left-0 right-0 flex justify-center  w-fit mx-auto">
           <div
-            className="text-white text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight cursor-pointer"
+            className="text-white text-center text-[32px]  md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight cursor-pointer"
           >
             Anurassaa
           </div>
@@ -69,7 +69,7 @@ export default function Navbar() {
             {scrolled && (
               <motion.a
                 href="#contact"
-                className="text-white hover:text-[#f8f887] transition-colors cursor-pointer text-lg lg:text-base"
+                className="text-white hover:text-[#f8f887]  transition-colors cursor-pointer text-lg lg:text-2xl"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -88,7 +88,7 @@ export default function Navbar() {
           {scrolled && (
             <motion.button
               onClick={toggleMobileMenu}
-              className="md:hidden text-white p-2"
+              className="md:hidden w-10  absolute right-4 text-white p-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -100,20 +100,20 @@ export default function Navbar() {
         </AnimatePresence>
       </div>
 
-      {/* Mobile Menu */}
+   {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && scrolled && (
           <motion.div
-            className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-t border-[#E5903D]/30"
+            className="md:hidden absolute top-full z-50 left-0 right-0 bg-[#E5903D]/90  backdrop-blur-xl border-t  border-white/20"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="flex flex-col space-y-4 px-6 py-6">
+            <div className="flex flex-col rounded-b-xl border-b  border-white/20 space-y-4  py-6">
               <motion.a
                 href="#about"
-                className="text-white hover:text-[#f8f887] transition-colors cursor-pointer text-lg"
+                className="text-white hover:text-[#f8f887] transition-colors border-b border-white/20 pb-4 cursor-pointer px-6 text-lg"
                 onClick={() => setMobileMenuOpen(false)}
                 whileTap={{ scale: 0.95 }}
               >
@@ -121,7 +121,7 @@ export default function Navbar() {
               </motion.a>
               <motion.a
                 href="#contact"
-                className="text-white hover:text-[#f8f887] transition-colors cursor-pointer text-lg"
+                className="text-white hover:text-[#f8f887]    transition-colors cursor-pointer px-6 text-lg"
                 onClick={() => setMobileMenuOpen(false)}
                 whileTap={{ scale: 0.95 }}
               >
