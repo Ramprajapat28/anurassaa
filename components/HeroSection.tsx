@@ -13,10 +13,11 @@ export default function HeroSection() {
           className="w-full opacity-40  h-full object-cover "
         />
         <div className="absolute  inset-0 bg-gradient-to-r from-[#E5903D] via-transparent to-[#E5903D]/80" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#E5903D]/70 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-70 left-0 px-8 pl-16 max-w-4xl">
+      <div className="relative  left-0 px-8 pl-16 max-w-4xl">
         <motion.h1
           className="text-6xl md:text-8xl text-left font-black text-[#FAF6C6] mb-6 leading-tight"
           initial={{ opacity: 0, y: 50 }}

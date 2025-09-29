@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <div 
-      className="fixed top-0 left-0 right-0 z-50  backdrop-blur-xl transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-50  backdrop-blur-sm transition-all duration-300"
      
     >
       <div className="absolute inset-0">
@@ -74,7 +74,7 @@ export default function Navbar() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4 }}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Contact Us
