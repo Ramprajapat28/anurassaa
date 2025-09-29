@@ -17,14 +17,15 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative  left-0 px-8 pl-16 max-w-4xl">
+      <div className="relative  left-0 px-8 pl-6 md:pl-16 max-w-4xl">
         <motion.h1
-          className="text-6xl md:text-8xl text-left font-black text-[#FAF6C6] mb-6 leading-tight"
+          className="text-[52px]  md:text-6xl lg:text-8xl text-left font-black text-[#FAF6C6] mb-6 leading-tight"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          
         >
-          PROTEIN <br></br> THAT DOES MORE.
+          PROTEIN <br></br> THAT <br></br>DOES MORE.
         </motion.h1>
         
         <motion.p

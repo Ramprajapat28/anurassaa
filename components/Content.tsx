@@ -5,22 +5,23 @@ export default function Content() {
   return (
     <>
       {/* First Section */}
-      <div className="bg-[#E5903D] py-8 sm:py-12 md:py-16 lg:py-20">
+      <div className="bg-[#E5903D] py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-36 items-center">
             {/* Image sliding from left */}
             <motion.div
-              className="relative"
+              className="relative group"
               initial={{ opacity: 0, x: -30, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, ease: "easeIn" }}
+              whileHover={{ scale: 1.05 }}
+              // viewport={{ once: true, amount: 0.3 }}
             >
               <div className="rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden relative w-full">
                 <img
                   src={"/content/rectangle.svg"}
                   alt="Fermented protein"
-                  className="w-full h-[220px] xs:h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
+                  className="w-full h-[220px] xs:h-[250px] group-hover:scale-110 sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
                 />
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-[#0a260a]/60 to-transparent" />
               </div>
@@ -29,17 +30,17 @@ export default function Content() {
             {/* Text sliding from right */}
             <motion.div
               className="text-white mt-4 md:mt-0"
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.3 }}
+              // viewport={{  amount: 0.3 }}
             >
               <motion.h2
                 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black text-[#f8f887] mb-2 sm:mb-3 lg:mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
               >
                 FERMENTED,
               </motion.h2>
@@ -48,7 +49,7 @@ export default function Content() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
               >
                 NOT FORTIFIED.
               </motion.p>
@@ -57,7 +58,7 @@ export default function Content() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
               >
                 Your gut knows the difference.
               </motion.p>
@@ -67,10 +68,10 @@ export default function Content() {
           {/* Description fading in from bottom */}
           <motion.div
             className="mt-8 sm:mt-12 lg:mt-16 text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            // viewport={{ once: true, amount: 0.5 }}
           >
             <p className="text-white text-sm sm:text-base lg:text-lg leading-relaxed px-2 sm:px-4 lg:px-0">
               Anurassaa delivers probiotic strains like
@@ -84,23 +85,23 @@ export default function Content() {
       </div>
 
       {/* Second Section */}
-      <div className="bg-[#E5903D] py-8 sm:py-12 md:py-16 lg:py-20">
+      <div className="bg-[#E5903D] py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-36 items-center">
             {/* Text sliding from left - Order changes on mobile */}
             <motion.div
               className="text-white order-2 md:order-1 mt-4 md:mt-0"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.3 }}
+              // viewport={{ once: true, amount: 0.3 }}
             >
               <motion.h2
                 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black text-[#f8f887] mb-2 sm:mb-3 lg:mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
               >
                 DIGESTION
               </motion.h2>
@@ -109,7 +110,7 @@ export default function Content() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
               >
                 MADE EFFORTLESS,
               </motion.p>
@@ -118,7 +119,7 @@ export default function Content() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
               >
                 Your body knows it's smooth.
               </motion.p>
@@ -126,17 +127,18 @@ export default function Content() {
 
             {/* Image sliding from right */}
             <motion.div
-              className="relative order-1 md:order-2"
+              className="relative group order-1 md:order-2"
               initial={{ opacity: 0, x: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.3 }}
+               whileHover={{ scale: 1.04 }}
+              // viewport={{ once: true, amount: 0.3 }}
             >
               <div className="rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden relative w-full">
                 <img
                   src={"/content/rectangle1.svg"}
                   alt="Easy digestion"
-                  className="w-full h-[220px] xs:h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
+                  className="w-full h-[220px] xs:h-[250px] group-hover:scale-110 sm:h-[300px] md:h-[350px] lg:h-[400px]  object-cover"
                 />
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-[#0a260a]/60 to-transparent" />
               </div>
@@ -146,10 +148,10 @@ export default function Content() {
           {/* Description fading in from bottom */}
           <motion.div
             className="mt-8 sm:mt-12 lg:mt-16 text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            
           >
             <p className="text-white text-sm sm:text-base lg:text-lg leading-relaxed px-2 sm:px-4 lg:px-0">
               Anurassaa's naturally fermented protein is gentle on
