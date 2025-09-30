@@ -106,6 +106,7 @@ export default function AnimatedTextBars() {
           duration: 0.8,
           ease: "easeInOut"
         }}
+         whileHover={{ scale: 1.05 }}
       >
         <AnimatePresence mode="wait">
           {state.split ? (
