@@ -93,9 +93,9 @@ export default function AnimatedTextBars() {
   const state = animationStates[currentState];
 
   return (
-    <div className="relative w-full bg-[#E5903D] min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
+    <div className="relative w-full bg-[#E5903D] min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8">
       <motion.div 
-        className="relative w-full max-w-7xl h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] rounded-[25px] sm:rounded-[35px] md:rounded-[50px] overflow-hidden"
+        className="relative w-full max-w-7xl  h-[400px] lg:h-[500px] rounded-[25px] sm:rounded-[30px]  overflow-hidden"
         style={{
           backgroundColor: state.bgColor
         }}
@@ -120,7 +120,7 @@ export default function AnimatedTextBars() {
             >
               {/* Left side */}
               <motion.div 
-                className="absolute left-0 top-0 bottom-0 rounded-l-[25px] sm:rounded-l-[35px] md:rounded-l-[50px] overflow-visible"
+                className="absolute left-0 top-0 bottom-0 rounded-l-[25px] sm:rounded-l-[30px] overflow-visible"
                 style={{
                   backgroundColor: state.split.leftBg,
                   width: "50%",
@@ -153,7 +153,7 @@ export default function AnimatedTextBars() {
 
               {/* Right side */}
               <motion.div 
-                className="absolute right-0 top-0 bottom-0 rounded-r-[25px] sm:rounded-r-[35px] md:rounded-r-[50px] overflow-visible"
+                className="absolute right-0 top-0 bottom-0 rounded-r-[25px] sm:rounded-r-[30px]  overflow-visible"
                 style={{
                   backgroundColor: state.split.rightBg,
                   width: "50%",
