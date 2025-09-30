@@ -33,7 +33,7 @@ export default function Contact() {
     // Prevent hydration mismatch by not rendering form until mounted
     if (!mounted) {
         return (
-            <div id="contact" className="bg-[#E5903D] py-16 sm:py-20 lg:py-24 min-h-screen flex items-center">
+            <div id="contact" className="bg-[#0a260a] py-16 sm:py-20 lg:py-24 min-h-screen flex items-center">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
                     <div className="text-center mb-12 sm:mb-16 lg:mb-20">
                         <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-4 md:gap-10">
@@ -76,7 +76,7 @@ export default function Contact() {
     }
 
     return (
-        <div id="contact" className="bg-[#E5903D] py-16 sm:py-20 lg:py-24 min-h-screen flex items-center">
+        <div id="contact" className="bg-[#0a260a] py-16 sm:py-20 lg:py-24 min-h-screen flex items-center">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
                 {/* Header - Centered at top */}
                 <motion.div
@@ -131,8 +131,8 @@ export default function Contact() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        <div className="bg-[#f5f6f5]/95 backdrop-blur-sm rounded-3xl p-8 sm:p-10 lg:p-12 shadow-2xl flex flex-col h-full">
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#E5903D] mb-10 text-center tracking-wide">
+                        <div className="bg-[#fffcdf] backdrop-blur-sm rounded-3xl p-8 sm:p-10 lg:p-12 shadow-2xl flex flex-col h-full">
+                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ed8216] mb-10 text-center tracking-wide">
                                 CONTACT US
                             </h2>
 
@@ -200,7 +200,7 @@ export default function Contact() {
                                 <div className="pt-4">
                                     <motion.button
                                         type="submit"
-                                        className="bg-[#f8f887] text-[#0a260a] font-semibold px-10 py-3 rounded-full text-base sm:text-lg hover:bg-[#f8f887]/90 transition-all shadow-md border-2 border-[#0a260a]"
+                                        className="bg-[#ef8419] text-[#0a260a] font-semibold px-10 py-3 rounded-full text-base sm:text-lg hover:bg-[#ef8419]/80 transition-all shadow-md border-2 border-[#0a260a]"
                                         whileHover={{ scale: 1.03 }}
                                         whileTap={{ scale: 0.97 }}
                                     >

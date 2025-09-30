@@ -16,7 +16,7 @@ export default function WeCareSection() {
     }, []);
 
     return (
-        <div className="bg-[#E5903D] py-8 sm:py-12 lg:py-20">
+        <div className="py-8 sm:py-12 lg:py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* First row: Responsive layout - stacked on mobile, 3-col on larger screens */}
                 {/* First row: Responsive layout - stacked on mobile, 3-col from tablet onwards */}
@@ -49,7 +49,7 @@ export default function WeCareSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1 }}
                     >
-                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white">
+                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#E5903D] md:text-white">
                             <div className="mb-1 sm:mb-2">We CARE</div>
                             <div className="mb-1 sm:mb-2">about</div>
                             <AnimatePresence mode="wait">
@@ -79,7 +79,7 @@ export default function WeCareSection() {
                                 ) : (
                                     <motion.div
                                         key="you"
-                                        className="text-[#f8f887] font-black text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl"
+                                        className="text-[#000000] font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl"
                                         initial={{ opacity: 0, scale: 0.8 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         exit={{ opacity: 0, scale: 0.8 }}
