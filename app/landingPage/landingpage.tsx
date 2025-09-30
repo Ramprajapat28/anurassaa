@@ -4,12 +4,14 @@ import Content from "@/components/Content"
 import Footer from "@/components/Footer"
 import WeCareSection from "@/components/WeCareSection"
 import Contact from "@/components/Contact"
+import Buildingblock from "@/components/Buildingblock"
 
 export default function Page() {
   return (
     <div className="overflow-x-hidden">
       <Navbar />
       <HeroSection />
+      <Buildingblock />
       <Content />
       <WeCareSection />
       <Contact />
