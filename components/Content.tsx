@@ -5,7 +5,7 @@ export default function Content() {
   return (
     <>
       {/* First Section */}
-      <div className="bg-[#E5903D] py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden">
+      <div className="bg-[#E5903D] pb-8 sm:pb-12 md:pb-16 lg:pb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-36 items-center">
             {/* Image sliding from left */}

@@ -10,7 +10,7 @@ export default function Footer() {
               Learn More
             </h4>
             <div className="space-y-2  text-[#0a260a]">
-              <p className="cursor-pointer hover-underline">Home</p>
+              <a href="/" className="cursor-pointer hover-underline">Home</a>
               <p className="cursor-pointer hover-underline">About Us</p>
             </div>
           </div>

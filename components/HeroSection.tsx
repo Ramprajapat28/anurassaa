@@ -29,7 +29,7 @@ export default function HeroSection() {
         </motion.h1>
         
         <motion.p
-          className="text-xl md:text-4xl text-left text-[#FAF6C6] font-medium "
+          className="text-xl md:text-4xl text-left text-[#FAF6C6] tracking-wide font-medium "
           initial={{ opacity: 0, y: 30 }}
          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.0, delay: 0.8 }}
