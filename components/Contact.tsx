@@ -74,11 +74,13 @@ export default function Contact() {
                     
                     {/* Left Image Panel */}
                     <motion.div
-                        className="md:col-span-1 lg:col-span-3"
+                        className="md:col-span-1 group lg:col-span-3"
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
+                        whileHover={{ scale: 1.05 }}
+
                     >
                         <div className="rounded-2xl overflow-hidden h-full md:h-2/3  lg:h-full lg:min-h-[400px]">
                             <Image
