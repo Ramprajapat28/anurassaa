@@ -124,7 +124,7 @@ export default function Content() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 // viewport={{ once: true }}
               >
-                Your body knows it's smooth.
+                Your body knows it&apos;s smooth.
               </motion.p>
             </motion.div>
 
@@ -159,7 +159,7 @@ export default function Content() {
             
           >
             <p className="text-white  sm:text-lg lg:text-2xl leading-relaxed px-2 sm:px-4 lg:px-0">
-              Anurassaa's naturally fermented protein is gentle on
+              Anurassaa&apos;s naturally fermented protein is gentle on
               your gut. With high solubility and nitrogen index,
               it mixes easily and is well-tolerated — unlike many
               whey or chemically extracted proteins that often
