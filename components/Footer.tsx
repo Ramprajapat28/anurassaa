@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
               Learn More
             </h4>
             <div className="space-y-2  text-[#0a260a]">
-              <a href="/" className="cursor-pointer hover-underline">Home</a>
+              <Link href="/" className="cursor-pointer hover-underline">Home</Link>
               <p className="cursor-pointer hover-underline">About Us</p>
             </div>
           </div>
