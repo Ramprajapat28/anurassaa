@@ -20,7 +20,7 @@ export default function Content() {
             >
               <div className="rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden relative w-full">
                 <Image
-                  src={"/content/rectangle.svg"}
+                  src={"/content/Rectangle.svg"}
                  height={0}
                  width={0}
                   alt="Fermented protein"
@@ -139,7 +139,7 @@ export default function Content() {
             >
               <div className="rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden relative w-full">
                 <Image
-                  src={"/content/rectangle1.svg"}
+                  src={"/content/Rectangle1.svg"}
                    height={0}
                  width={0}
                   alt="Easy digestion"
