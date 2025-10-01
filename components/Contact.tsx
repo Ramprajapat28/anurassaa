@@ -41,7 +41,7 @@ export default function Contact() {
 
     return (
         <div id="contact" className="bg-[#0a260a] py-16 sm:py-20 lg:py-24 min-h-screen flex items-center">
-            <div className="md:max-w-6xl lg:max-w-7xl xl:max-w-[1408px] mx-auto px-6 sm:px-8 lg:px-12 w-full">
+            <div className="md:max-w-6xl lg:max-w-7xl  mx-auto px-6 sm:px-8 lg:px-12 w-full">
                 {/* Header - Centered at top */}
                 <motion.div
                     className="text-center mb-12 sm:mb-16 lg:mb-20"
@@ -80,13 +80,13 @@ export default function Contact() {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <div className="rounded-2xl overflow-hidden h-full md:h-2/3 lg:h-full lg:min-h-[500px]">
+                        <div className="rounded-2xl overflow-hidden h-full md:h-2/3  lg:h-full lg:min-h-[400px]">
                             <Image
                                 src="/contact/unsplash.svg"
                                height={0}
                                  width={0}
                                 alt="Protein powder being mixed"
-                                className="w-full  h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                className="w-full  h-full object-fit group-hover:scale-110 transition-transform duration-500"
                             />
                         </div>
                     </motion.div>
