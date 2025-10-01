@@ -52,7 +52,7 @@ export default function Contact() {
                 >
                     <div className="flex flex-col md:flex-row items-center md:items-start tracking-[0.5rem] xl:tracking-[0.8rem] ap-4 md:gap-10">
                         {/* SIMPLIFY with underline */}
-                        <h1 className="relative text-left text-[45px] sm:text-6xl lg:text-8xl xl:text-[122.65px] font-['Kumbh_Sans'] font-bold text-[#FAE951] leading-none">
+                        <h1 className="relative text-left text-[45px] sm:text-6xl lg:text-8xl xl:text-[122.65px] font-['Kumbh_Sans'] mb-6 font-bold text-[#FAE951] leading-none">
                             SIMPLIFY.
                             <span className="absolute left-0 -bottom-2 w-full h-[3px]   bg-gradient-to-r from-[#E5903D] to-[#FFCE73]"></span>
                         </h1>
