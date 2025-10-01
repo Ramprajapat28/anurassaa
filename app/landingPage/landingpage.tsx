@@ -13,15 +13,18 @@ export default function Page() {
       <HeroSection />
       <Buildingblock />
       <Content />
-      
+
       {/* Gradient Section Starts */}
-      <div className="bg-gradient-to-b from-[#E5903D] via-[#FAF6C6] to-[#0a260a] 
+      <div className="bg-gradient-to-b from-[#E5903D] via-[#FAF6C6]/80 to-[#FAF6C6]/80 
                 bg-[length:100%_100%] bg-no-repeat">
         <WeCareSection />
       </div>
       {/* Gradient Section Ends */}
+      <div className="bg-gradient-to-b from-[#FAF6C6]/80  via-[#0a260a]/80 via-[#0a260a]/80  to-[#0a260a] 
+                 bg-no-repeat">
+        <Contact />
+      </div>
 
-      <Contact />
       <Footer />
     </div>
   );
