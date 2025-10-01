@@ -49,7 +49,7 @@ export default function Contact() {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    <div className="flex flex-col md:flex-row items-center md:items-start tracking-[0.5rem] gap-4 md:gap-10">
+                    <div className="flex flex-col md:flex-row items-center md:items-start tracking-[0.5rem] xl:tracking-[0.8rem] ap-4 md:gap-10">
                         {/* SIMPLIFY with underline */}
                         <h1 className="relative text-left text-[45px] sm:text-6xl lg:text-8xl xl:text-[122.65px] font-['Kumbh_Sans'] font-bold text-[#FAE951] leading-none">
                             SIMPLIFY.
