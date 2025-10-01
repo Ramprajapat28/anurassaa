@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import Navbar1 from "@/components/Navbar1";
 import HeroSection from "@/components/HeroSection";
 import Content from "@/components/Content";
 import Footer from "@/components/Footer";
@@ -9,7 +9,7 @@ import Buildingblock from "@/components/Buildingblock";
 export default function Page() {
   return (
     <div className="overflow-x-hidden">
-      <Navbar />
+      <Navbar1 />
       <HeroSection />
       <Buildingblock />
       <Content />
