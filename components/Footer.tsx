@@ -7,41 +7,41 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-8">
         <div className="grid md:grid-cols-4 gap-12">
           <div>
-            <h4 className="text-[#0a260a] font-semibold text-xl mb-4">
+            <h4 className="text-[#0a260a] font-semibold text-xl xl:text-2xl mb-4">
               Learn More
             </h4>
             <div className="space-y-2  text-[#0a260a]">
-              <Link href="/" className="cursor-pointer hover-underline">Home</Link>
-              <p className="cursor-pointer hover-underline">About Us</p>
+              <Link href="/"><p className="cursor-pointer hover-underline lg:text-xl">Home</p></Link>
+              <p className="cursor-pointer hover-underline lg:text-xl">About Us</p>
             </div>
           </div>
 
           <div>
-            <h4 className="text-[#0a260a] font-semibold text-xl mb-4">
+            <h4 className="text-[#0a260a] font-semibold xl:text-2xl mb-4">
               Who We are
             </h4>
             <div className="space-y-2 text-[#0a260a]">
-              <p className="cursor-pointer hover-underline">Our Story</p>
-              <p className="cursor-pointer hover-underline">Our Mission</p>
+              <p className="cursor-pointer hover-underline lg:text-xl">Our Story</p>
+              <p className="cursor-pointer hover-underline lg:text-xl">Our Mission</p>
             </div>
           </div>
 
           <div>
-            <h4 className="text-[#0a260a] font-semibold text-xl mb-4">
+            <h4 className="text-[#0a260a] font-semibold xl:text-2xl mb-4">
               Support
             </h4>
             <div className="space-y-2 text-[#0a260a]">
-              <p className="cursor-pointer hover-underline">Contact Us</p>
-              <p className="cursor-pointer hover-underline">FAQ</p>
-              <p className="cursor-pointer hover-underline">Privacy Policy</p>
-              <p className="cursor-pointer hover-underline">
+              <p className="cursor-pointer hover-underline lg:text-xl">Contact Us</p>
+              <p className="cursor-pointer hover-underline lg:text-xl">FAQ</p>
+              <p className="cursor-pointer hover-underline lg:text-xl">Privacy Policy</p>
+              <p className="cursor-pointer hover-underline lg:text-xl">
                 Terms and Conditions
               </p>
             </div>
           </div>
 
           <div>
-            <h2 className="text-[#0a260a] text-2xl font-semibold">
+            <h2 className="text-[#0a260a] text-4xl font-semibold md:mr-8">
               Anurassaa
             </h2>
           </div>
