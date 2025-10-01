@@ -2,14 +2,14 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
-import { motion, useScroll, AnimatePresence } from "framer-motion";
+import { motion,  AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { scrollY } = useScroll();
+ 
 
   useEffect(() => {
     const updateScrolled = () => setScrolled(window.scrollY > 100);
