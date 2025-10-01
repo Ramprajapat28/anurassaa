@@ -1,5 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 
 export default function HeroSection() {
@@ -7,8 +8,10 @@ export default function HeroSection() {
     <div className="relative h-screen w-full flex items-center  overflow-hidden bg-[#E5903D]">
       {/* Background Image */}
       <div className="absolute inset-0  ">
-        <img 
-          src={"/hero/hero1.svg"} 
+        <Image 
+          src={"/hero/hero1.svg"}
+        height={0}
+                 width={0}
           alt="hero background" 
           className="w-full opacity-40  h-full object-cover "
         />

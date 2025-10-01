@@ -4,6 +4,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { motion, useScroll, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,8 +25,10 @@ export default function Navbar() {
      
     >
       <div className="absolute inset-0">
-        <img 
+        <Image
           src={"/hero/hero1.svg"} 
+           height={0}
+                 width={0}
           alt="hero background" 
           className="w-full opacity-40 h-full object-cover"
         />

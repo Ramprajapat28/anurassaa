@@ -3,6 +3,7 @@
 import React from "react";
 import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -80,8 +81,10 @@ export default function Contact() {
                         viewport={{ once: true }}
                     >
                         <div className="rounded-2xl overflow-hidden h-full md:h-2/3 lg:h-full lg:min-h-[500px]">
-                            <img
+                            <Image
                                 src="/contact/unsplash.svg"
+                               height={0}
+                                 width={0}
                                 alt="Protein powder being mixed"
                                 className="w-full  h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             />

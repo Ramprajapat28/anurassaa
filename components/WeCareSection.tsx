@@ -3,6 +3,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { motion, useScroll, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 // import { Menu, X } from "lucide-react";
 
 export default function WeCareSection() {
@@ -30,8 +31,10 @@ export default function WeCareSection() {
                         whileHover={{ scale: 1.05 }}
                     >
                         <div className="rounded-xl lg:rounded-2xl overflow-hidden md:aspect-[4/3] lg:aspect-auto relative">
-                            <img
+                            <Image
                                 src={"/weCare/Rectangle1.svg"}
+                              height={0}
+                 width={0}
                                 alt="Completely Acid-Free"
                                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                             />
@@ -101,8 +104,10 @@ export default function WeCareSection() {
                         whileHover={{ scale: 1.05 }}
                     >
                         <div className="rounded-xl lg:rounded-2xl overflow-hidden md:aspect-[4/3] lg:aspect-auto relative">
-                            <img
+                            <Image
                                 src={"/weCare/Rectangle2.svg"}
+                                height={0}
+                 width={0}
                                 alt="High Protein Purity"
                                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                             />
@@ -119,11 +124,11 @@ export default function WeCareSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-10 max-w-4xl mx-auto">
                     {[
                         {
-                            img: "/weCare/Rectangle4.svg",
+                            Image: "/weCare/Rectangle4.svg",
                             title: "High Nitrogen Solubility Index",
                         },
                         {
-                            img: "/weCare/Rectangle3.svg",
+                            Image: "/weCare/Rectangle3.svg",
                             title: "All essential Amino-acids",
                         },
                     ].map((item, index) => (
@@ -139,8 +144,10 @@ export default function WeCareSection() {
                             whileHover={{ scale: 1.05 }}
                         >
                             <div className="rounded-xl lg:rounded-2xl overflow-hidden aspect-[4/3] relative">
-                                <img
-                                    src={item.img}
+                                <Image
+                                    src={item.Image}
+                                     height={0}
+                 width={0}
                                     alt={item.title}
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                                 />

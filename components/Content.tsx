@@ -1,5 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export default function Content() {
   return (
@@ -18,8 +19,10 @@ export default function Content() {
               // viewport={{ once: true, amount: 0.3 }}
             >
               <div className="rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden relative w-full">
-                <img
+                <Image
                   src={"/content/rectangle.svg"}
+                 height={0}
+                 width={0}
                   alt="Fermented protein"
                   className="w-full h-[220px] xs:h-[250px] group-hover:scale-110 sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
                 />
@@ -135,8 +138,10 @@ export default function Content() {
               // viewport={{ once: true, amount: 0.3 }}
             >
               <div className="rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden relative w-full">
-                <img
+                <Image
                   src={"/content/rectangle1.svg"}
+                   height={0}
+                 width={0}
                   alt="Easy digestion"
                   className="w-full h-[220px] xs:h-[250px] group-hover:scale-110 sm:h-[300px] md:h-[350px] lg:h-[400px]  object-cover"
                 />
