@@ -1,165 +1,276 @@
-"use client"
+"use client";
 
-import React from "react";
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-// import { Menu, X } from "lucide-react";
 
 export default function WeCareSection() {
-    const [showFinger, setShowFinger] = useState(false);
+    const [showCards, setShowCards] = useState(false);
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setShowFinger((prev) => !prev);
-        }, 2000);
-        return () => clearInterval(interval);
-    }, []);
+        if (isInView) {
+            setShowCards(false);
+            const timer = setTimeout(() => {
+                setShowCards(true);
+            }, 2500);
+            return () => clearTimeout(timer);
+        } else {
+            setShowCards(false);
+        }
+    }, [isInView]);
 
     return (
-        <div className="py-8 sm:py-12 lg:py-20">
+        <div ref={sectionRef} className="py-11 sm:py-12 md:py-27 lg:py-20 relative min-h-[80vh]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* First row: Responsive layout - stacked on mobile, 3-col on larger screens */}
-                {/* First row: Responsive layout - stacked on mobile, 3-col from tablet onwards */}
-                <div className="flex flex-col md:grid md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto mb-8 sm:mb-12 items-center">
-                    {/* First Image */}
+                {/* Main heading - morphs smoothly */}
+                <motion.div
+                    className="text-center px-2 sm:px-4 relative"
+                    style={{ 
+                        transform: 'translateZ(0)',
+                        backfaceVisibility: 'hidden',
+                        perspective: 1000
+                    }}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={{ 
+                        y: isInView ? (showCards ? -50 : 100) : 100,
+                        opacity: isInView ? 1 : 0
+                    }}
+                    transition={{
+                        duration: 1.2,
+                        ease: [0.25, 0.1, 0.25, 1]
+                    }}
+                >
+                    {/* Left Leaf - Appears only in initial state */}
                     <motion.div
-                        className="relative group w-full max-w-sm mx-auto md:max-w-none md:mx-0 order-1 md:order-1"
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        whileHover={{ scale: 1.05 }}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 w-32 sm:w-40 md:w-48 lg:w-56"
+                        animate={{
+                            opacity: showCards ? 0 : 1,
+                            x: showCards ? -50 : 0
+                        }}
+                        transition={{
+                            duration: 0.8,
+                            ease: [0.25, 0.1, 0.25, 1]
+                        }}
                     >
-                        <div className="rounded-xl lg:rounded-2xl overflow-hidden md:aspect-[4/3] lg:aspect-auto relative">
-                            <Image
-                                src={"/weCare/Rectangle1.svg"}
-                              height={0}
-                 width={0}
-                                alt="Completely Acid-Free"
-                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                            <h3 className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4 text-white font-medium text-center text-xs sm:text-sm md:text-base">
-                                Completely Acid-Free
-                            </h3>
-                        </div>
+                        <Image
+                            src="/weCare/Leaf_01.svg"
+                            alt="Leaf decoration"
+                            width={368}
+                            height={462}
+                            className="w-full h-auto"
+                        />
                     </motion.div>
 
-                    {/* Main heading with animated "YOU" - centered on mobile */}
+                    {/* Right Leaf - Appears only in initial state */}
                     <motion.div
-                        className="text-center px-2 sm:px-4 order-3 md:order-2 w-full"
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.1 }}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 w-32 sm:w-40 md:w-48 lg:w-56"
+                        animate={{
+                            opacity: showCards ? 0 : 1,
+                            x: showCards ? 50 : 0
+                        }}
+                        transition={{
+                            duration: 0.8,
+                            ease: [0.25, 0.1, 0.25, 1]
+                        }}
                     >
-                        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#E5903D] md:text-white">
-                            <div className="mb-1 sm:mb-2">We CARE</div>
-                            <div className="mb-1 sm:mb-2">about</div>
-                            <AnimatePresence mode="wait">
-                                {showFinger ? (
-                                    <motion.span
-                                        key="finger"
-                                        className="inline-block text-[#f8f887] text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl"
-                                        initial={{
-                                            opacity: 0,
-                                            scale: 0.5,
-                                            rotate: -10,
-                                        }}
-                                        animate={{
-                                            opacity: 1,
-                                            scale: 1,
-                                            rotate: 0,
-                                        }}
-                                        exit={{
-                                            opacity: 0,
-                                            scale: 0.5,
-                                            rotate: 10,
-                                        }}
-                                        transition={{ duration: 0.4 }}
-                                    >
-                                        🫵
-                                    </motion.span>
-                                ) : (
-                                    <motion.div
-                                        key="you"
-                                        className="text-[#000000] font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl"
-                                        initial={{ opacity: 0, scale: 0.8 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        exit={{ opacity: 0, scale: 0.8 }}
-                                        transition={{ duration: 0.4 }}
-                                    >
-                                        YOU!
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </div>
+                        <Image
+                            src="/weCare/Leaf_01.svg"
+                            alt="Leaf decoration"
+                            width={368}
+                            height={462}
+                            className="w-full h-auto transform scale-x-[-1]"
+                        />
                     </motion.div>
 
-                    {/* Second Image */}
-                    <motion.div
-                        className="relative group w-full max-w-sm mx-auto md:max-w-none md:mx-0 order-2 md:order-3"
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                        whileHover={{ scale: 1.05 }}
+                    <motion.h1
+                        className="font-[var(--font-cabinet)] text-9xl text-[#1B5E20]"
+                        style={{ 
+                            display: 'flex', 
+                            flexDirection: 'column', 
+                            alignItems: 'center',
+                            transform: 'translateZ(0)'
+                        }}
                     >
-                        <div className="rounded-xl lg:rounded-2xl overflow-hidden md:aspect-[4/3] lg:aspect-auto relative">
-                            <Image
-                                src={"/weCare/Rectangle2.svg"}
-                                height={0}
-                 width={0}
-                                alt="High Protein Purity"
-                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                            <h3 className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4 text-white font-medium text-center text-xs sm:text-sm md:text-base">
-                                High Protein Purity
-                            </h3>
-                        </div>
-                    </motion.div>
-                </div>
-
-
-                {/* Second row of images - responsive grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-10 max-w-4xl mx-auto">
-                    {[
-                        {
-                            Image: "/weCare/Rectangle4.svg",
-                            title: "High Nitrogen Solubility Index",
-                        },
-                        {
-                            Image: "/weCare/Rectangle3.svg",
-                            title: "All essential Amino-acids",
-                        },
-                    ].map((item, index) => (
+                        {/* "We CARE" */}
                         <motion.div
-                            key={index + 2}
-                            className="relative group w-full max-w-sm mx-auto sm:max-w-none"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{
-                                duration: 0.6,
-                                delay: (index + 2) * 0.1,
+                            style={{ overflow: 'hidden', transform: 'translateZ(0)' }}
+                            animate={{
+                                fontSize: showCards ? "2rem" : "3.5rem",
+                                opacity: showCards ? 0 : 1,
+                                height: showCards ? 0 : "auto",
+                                marginBottom: showCards ? 0 : "0.5rem"
                             }}
-                            whileHover={{ scale: 1.05 }}
+                            transition={{
+                                duration: 1.2,
+                                ease: [0.25, 0.1, 0.25, 1]
+                            }}
                         >
-                            <div className="rounded-xl lg:rounded-2xl overflow-hidden aspect-[4/3] relative">
-                                <Image
-                                    src={item.Image}
-                                     height={0}
-                 width={0}
-                                    alt={item.title}
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                                <h3 className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4 text-white font-medium text-center text-xs sm:text-sm md:text-base">
-                                    {item.title}
-                                </h3>
-                            </div>
-
+                            We CARE
                         </motion.div>
-                    ))}
-                </div>
+
+                        {/* "about" */}
+                        <motion.div
+                            style={{ overflow: 'hidden', transform: 'translateZ(0)' }}
+                            animate={{
+                                fontSize: showCards ? "2rem" : "3.5rem",
+                                opacity: showCards ? 0 : 1,
+                                height: showCards ? 0 : "auto",
+                                marginBottom: showCards ? 0 : "0.5rem"
+                            }}
+                            transition={{
+                                duration: 1.2,
+                                ease: [0.25, 0.1, 0.25, 1]
+                            }}
+                        >
+                            about
+                        </motion.div>
+
+                        {/* "YOU!" - smoothly glides to become full sentence */}
+                        <motion.div
+                            className="font-athene relative"
+                            style={{ transform: 'translateZ(0)' }}
+                            animate={{
+                                fontSize: showCards ? "2rem" : "5rem",
+                            }}
+                            transition={{
+                                duration: 1.2,
+                                ease: [0.25, 0.1, 0.25, 1]
+                            }}
+                        >
+                            {/* Continuous text that morphs smoothly */}
+                            <motion.div
+                                style={{ position: 'relative' }}
+                                animate={{
+                                    opacity: 1
+                                }}
+                            >
+                                {/* "YOU!" that fades out */}
+                                <motion.span
+                                    style={{ 
+                                        position: showCards ? 'absolute' : 'relative',
+                                        left: showCards ? '50%' : 'auto',
+                                        transform: showCards ? 'translateX(-50%)' : 'none'
+                                    }}
+                                    className="text-15xl font-semibold"
+                                    animate={{
+                                        opacity: showCards ? 0 : 1,
+                                    }}
+                                    transition={{ 
+                                        duration: 0.6,
+                                        ease: [0.25, 0.1, 0.25, 1]
+                                    }}
+                                >
+                                    YOU!
+                                </motion.span>
+                                
+                                {/* "We CARE about YOU!" that fades in at same position */}
+                                <motion.span
+                                    style={{ 
+                                        position: showCards ? 'relative' : 'absolute',
+                                        left: !showCards ? '50%' : 'auto',
+                                        transform: !showCards ? 'translateX(-50%)' : 'none',
+                                        whiteSpace: 'nowrap'
+                                    }}
+                                    className="text-3xl sm:text-4xl lg:text-5xl"
+                                    animate={{
+                                        opacity: showCards ? 1 : 0,
+                                    }}
+                                    transition={{ 
+                                        duration: 0.8,
+                                        delay: 0.5,
+                                        ease: [0.25, 0.1, 0.25, 1]
+                                    }}
+                                >
+                                    We CARE about   
+                                    <span className="font-semibold ml-1 sm:ml-2 md:ml-3 lg:ml-4">
+                                        YOU!
+                                    </span>
+                                </motion.span>
+                            </motion.div>
+                        </motion.div>
+                    </motion.h1>
+                </motion.div>
+
+                {/* Cards appear smoothly */}
+                <motion.div
+                    className="mt-1"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: showCards ? 1 : 0 }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                >
+                    {showCards && (
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
+                            {[
+                                { src: "/weCare/Rectangle1.svg", title: "Completely\nAcid-Free" },
+                                { src: "/weCare/Rectangle4.svg", title: "High Nitrogen\nSolubility Index" },
+                                { src: "/weCare/Rectangle3.svg", title: "All essential\nAmino-acids" },
+                                { src: "/weCare/Rectangle2.svg", title: "High Protein\nPurity" }
+                            ].map((card, index) => (
+                                <motion.div
+                                    key={index}
+                                    className="relative group w-full"
+                                    style={{ 
+                                        transform: 'translateZ(0)',
+                                        backfaceVisibility: 'hidden'
+                                    }}
+                                    initial={{ 
+                                        opacity: 0, 
+                                        y: 60,
+                                        scale: 0.9
+                                    }}
+                                    animate={{ 
+                                        opacity: 1, 
+                                        y: 0,
+                                        scale: 1
+                                    }}
+                                    transition={{ 
+                                        duration: 0.9,
+                                        delay: 1 + (index * 0.2),
+                                        ease: [0.25, 0.46, 0.45, 0.94]
+                                    }}
+                                    whileHover={{ 
+                                        scale: 1.04,
+                                        y: -6,
+                                        transition: { duration: 0.2, ease: "easeOut" }
+                                    }}
+                                >
+                                    <div className="rounded-xl lg:rounded-2xl overflow-hidden aspect-[3/4] relative shadow-lg">
+                                        <Image
+                                            src={card.src}
+                                            height={600}
+                                            width={450}
+                                            alt={card.title}
+                                            priority
+                                            quality={90}
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                                            style={{ transform: 'translateZ(0)' }}
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent pointer-events-none" />
+                                        <motion.h3 
+                                            className="absolute bottom-3 sm:bottom-5 left-2 sm:left-4 right-2 sm:right-4 text-white font-semibold text-center text-xs sm:text-sm md:text-base"
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ 
+                                                delay: 1.3 + (index * 0.2),
+                                                duration: 0.7,
+                                                ease: "easeOut"
+                                            }}
+                                        >
+                                            {card.title.split('\n').map((line, i) => (
+                                                <React.Fragment key={i}>
+                                                    {line}
+                                                    {i < card.title.split('\n').length - 1 && <br />}
+                                                </React.Fragment>
+                                            ))}
+                                        </motion.h3>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    )}
+                </motion.div>
             </div>
         </div>
     );

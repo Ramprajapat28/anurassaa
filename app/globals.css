@@ -26,46 +26,68 @@ body {
 } */
 /* Import Google Font */
 /* Import Google Fonts */
+/* Import Athene Voyage locally */
+/* ------------------------------ */
+/* 🧩 1. Imports come FIRST */
+/* ------------------------------ */
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600;700&family=Cabinet+Grotesk:wght@400;500;600;700&display=swap");
-
-/* Import Tailwind */
 @import "tailwindcss";
 
-/* Theme Variables */
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* If you have a local font file, add it BEFORE the @layer definitions */
+@font-face {
+  font-family: "Athene Voyage";
+  src: url("/fonts/AtheneVoyage-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* Inline Theme Config */
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+/* ------------------------------ */
+/* 🧱 2. Tailwind Layers Declaration */
+/* ------------------------------ */
+@layer theme, base, components, utilities;
 
-  /* Default Tailwind font mappings */
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+/* ------------------------------ */
+/* 🎨 3. Theme Layer */
+/* ------------------------------ */
+@layer theme {
+  :root,
+  :host {
+    --background: #ffffff;
+    --foreground: #171717;
 
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+    /* Font variables */
+    --font-kumbh: "Kumbh Sans", sans-serif;
+    --font-cabinet: "Cabinet Grotesk", sans-serif;
+    --font-athene: "Athene Voyage", serif;
+  }
 
-  /* Custom Fonts */
-  --font-kumbh: "Kumbh Sans", sans-serif;
-  --font-cabinet: "Cabinet Grotesk", sans-serif;
-}
-
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @media (prefers-color-scheme: dark) {
+    :root,
+    :host {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
   }
 }
 
-/* Base Body Styles */
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-cabinet); /* 👈 Use Cabinet Grotesk by default */
+/* ------------------------------ */
+/* 🪶 4. Base Layer */
+/* ------------------------------ */
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-cabinet);
+  }
+}
+
+/* ------------------------------ */
+/* ✨ 5. Custom Utilities */
+/* ------------------------------ */
+@utility font-athene {
+  font-family: var(--font-athene);
+}
+@utility font-cabinet {
+  font-family: var(--font-cabinet);
 }
