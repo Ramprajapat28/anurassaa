@@ -25,7 +25,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 /* Import Google Font */
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600;700&display=swap");
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600;700&family=Cabinet+Grotesk:wght@400;500;600;700&display=swap");
 
 /* Import Tailwind */
 @import "tailwindcss";
@@ -36,6 +37,7 @@ body {
   --foreground: #171717;
 }
 
+/* Inline Theme Config */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -48,11 +50,12 @@ body {
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 
-  /* Custom Kumbh Sans font */
+  /* Custom Fonts */
   --font-kumbh: "Kumbh Sans", sans-serif;
+  --font-cabinet: "Cabinet Grotesk", sans-serif;
 }
 
-/* Dark mode variables */
+/* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -60,9 +63,9 @@ body {
   }
 }
 
-/* Base body styles */
+/* Base Body Styles */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-cabinet); /* 👈 Use Cabinet Grotesk by default */
 }

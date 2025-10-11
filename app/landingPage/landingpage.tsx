@@ -11,20 +11,27 @@ export default function Page() {
     <div className="overflow-x-hidden">
       <Navbar1 />
       <HeroSection />
+
       <Buildingblock />
-      <Content />
 
-      {/* Gradient Section Starts */}
-      <div className="bg-gradient-to-b from-[#E5903D] via-[#FAF6C6]/80 to-[#FAF6C6]/80 
-                bg-[length:100%_100%] bg-no-repeat">
-        <WeCareSection />
-      </div>
+  <Content />
+
+
+
       {/* Gradient Section Ends */}
-      <div className="bg-gradient-to-b from-[#FAF6C6]/80  via-[#0a260a]/80 via-[#0a260a]/80  to-[#0a260a] 
-                 bg-no-repeat">
-        <Contact />
-      </div>
+ <div
+  className="bg-gradient-to-b
+    from-[#C8E2B2] from-0%
+    to-[#FEFAEF] to-100%
+    bg-[length:100%_100%]
+    bg-no-repeat"
+>
+  <WeCareSection />
+</div>
 
+  
+      <Contact />
+    
       <Footer />
     </div>
   );

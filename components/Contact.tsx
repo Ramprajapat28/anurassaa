@@ -33,14 +33,14 @@ export default function Contact() {
 
     if (!mounted) {
         return (
-            <div id="contact" className=" py-12 min-h-screen flex items-center justify-center">
+            <div id="contact" className="bg-[#0a260a] py-12 min-h-screen flex items-center justify-center">
                 <p className="text-white">Loading...</p>
             </div>
         );
     }
 
     return (
-        <div id="contact" className=" py-16 sm:py-20 lg:py-24 min-h-screen flex items-center">
+        <div id="contact" className="bg-[#0a260a] py-16 sm:py-20 lg:py-24 min-h-screen flex items-center">
             <div className="md:max-w-6xl lg:max-w-7xl  mx-auto px-6 sm:px-8 lg:px-12 w-full">
                 {/* Header - Centered at top */}
                 <motion.div
