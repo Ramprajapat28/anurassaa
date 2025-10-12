@@ -56,26 +56,39 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
-        className="absolute top-[12%] sm:top-[15%] md:top-[18%] lg:top-[20%] left-1/2 -translate-x-1/2 w-[90%] md:w-[80%] lg:w-[70%] max-w-[1442px] z-30">
-        <h1 className="font-['Athene_Voyage',_serif] text-[#27891f] text-center uppercase leading-tight">
-          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl mb-0">
+        className="absolute top-[40%]   lg:top-[25%] left-1/2 -translate-x-1/2 w-[90%] md:w-[80%] lg:w-[70%] max-w-[1442px] z-30 flex justify-center items-center"
+      >
+        <h1 className="font-['Athene_Voyage',_serif] text-[#27891f] text-center uppercase leading-tight w-full">
+          <p className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl mb-0">
             Protein That Does
           </p>
-          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+          <p className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
             More.
           </p>
         </h1>
       </motion.div>
 
-      {/* Bottom Left Large Leaf - At bowl joint, animates from bottom */}
+      {/* Bottom Left Large Leaf - Responsive left position */}
       <motion.div 
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
-        className="absolute left-16 bottom-[8%] sm:left-20 md:left-24 w-[140px] sm:w-[180px] md:w-[220px] lg:w-[260px] z-0"
-        data-name="leaf2-left">
+        initial={{ opacity: 0, x: 100, y: 100 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 2, ease: "easeOut", delay: 1 }}
+        className="
+          absolute
+          bottom-[-4%]
+          left-[8%]    /* mobile */
+          sm:left-[12%]
+          md:left-[14%]
+          lg:left-[16%]
+          xl:left-[17%]
+          2xl:left-[17%]
+          w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[260px]
+          z-0
+        "
+        data-name="leaf2-left"
+      >
         <motion.div
-          animate={{ y: [0, -20, 0] }}
+          // animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
           <img 
             alt="" 
@@ -85,17 +98,29 @@ export default function HeroSection() {
         </motion.div>
       </motion.div>
 
-      {/* Bottom Right Large Leaf - At bowl joint, animates from bottom */}
+      {/* Bottom Right Large Leaf - Responsive right position */}
       <motion.div 
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
-        className="absolute right-16 bottom-[8%] sm:right-20 md:right-24 w-[140px] sm:w-[180px] md:w-[220px] lg:w-[260px] z-0"
-        data-name="leaf2-right">
+        initial={{ opacity: 0, x: -100, y: 100 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 2, ease: "easeOut", delay: 1 }}
+        className="
+          absolute
+          bottom-[-2%]
+          right-[8%]    /* mobile */
+          sm:right-[12%]
+          md:right-[14%]
+          lg:right-[16%]
+          xl:right-[17%]
+          2xl:right-[17%]
+          w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[260px]
+          z-0
+        "
+        data-name="leaf2-right"
+      >
         <motion.div
-          animate={{ y: [0, -20, 0] }}
+          // animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-          className="scale-x-[-1]">
+        >
           <img 
             alt="" 
             className="w-full h-auto" 
@@ -109,12 +134,14 @@ export default function HeroSection() {
         initial={{ opacity: 0, scale: 0.9, y: 50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[95%] sm:w-[90%] md:w-[85%] lg:w-[80%] xl:w-[75%] 2xl:w-[70%] max-w-[1267px] z-10"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-auto md:w-[85%] lg:w-[70%] xl:w-[70%] 2xl:w-[70%] max-w-[1267px] z-10"
         data-name="hero-image">
         <div className="relative w-full aspect-[3.12/1]">
           <img 
             alt="Bowl of Bhaji" 
-            className="w-full h-full object-contain object-bottom" 
+            // className="w-full h-full object-contain object-bottom"
+            className="w-full h-full object-cover md:object-contain lg:object-cover "
+         
             src="hero/bhaji2.svg" 
           />
           
