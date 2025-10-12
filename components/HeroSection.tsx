@@ -1,45 +1,139 @@
 "use client";
-import { motion} from "framer-motion";
-import Image from "next/image";
 
+import { motion } from "motion/react";
 
 export default function HeroSection() {
   return (
-    <div className="relative h-screen w-full flex items-center  overflow-hidden bg-[#E5903D]">
-      {/* Background Image */}
-      <div className="absolute inset-0  ">
-        <Image 
-          src={"/hero/hero1.svg"}
-        height={0}
-                 width={0}
-          alt="hero background" 
-          className="w-full opacity-40  h-full object-cover "
+    <div className="relative bg-[#fefaef] min-h-screen w-full overflow-hidden" data-name="Hero Section">
+      {/* Background */}
+      <div className="absolute inset-0 flex items-center justify-center" data-name="bg">
+        <img 
+          src="hero/bg.svg"
+          alt="" 
+          className="w-full h-full object-cover"
         />
-        <div className="absolute  inset-0 bg-gradient-to-r from-[#E5903D] via-transparent to-[#E5903D]/80" />
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#E5903D]/70 to-transparent" />
       </div>
 
-      {/* Content */}
- <div className="relative  left-0 px-8 pl-6 md:pl-16 max-w-4xl">
-        <motion.h1
-          className="text-[52px]  md:text-6xl lg:text-8xl text-left font-black text-[#FAF6C6] mb-6 leading-tight"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+      {/* Top Left Leaf - Animated entrance at corner */}
+      <motion.div 
+        initial={{ opacity: 0, x: -100, y: -100 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+        className="absolute left-[-10px] top-12  sm:top-20  md:top-20 w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] z-20">
+        <motion.div 
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          data-name="leaf-left">
+          <img 
+            alt="" 
+            className="w-full h-auto" 
+            src="hero/Leaf_02.svg" 
+          />
+        </motion.div>
+      </motion.div>
+
+      {/* Top Right Leaf - Animated entrance at corner (opposite direction) */}
+      <motion.div 
+        initial={{ opacity: 0, x: 100, y: -100 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+        className="absolute right-[-1%] top-12 sm:top-20  md:top-20 w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] z-20">
+        <motion.div 
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
           
-        >
-          PROTEIN <br></br> THAT <br></br>DOES MORE.
-        </motion.h1>
-        
-        <motion.p
-          className="text-xl md:text-4xl text-left text-[#FAF6C6] tracking-wide font-medium "
-          initial={{ opacity: 0, y: 30 }}
-         whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.0, delay: 0.8 }}
-        >
-          FOR YOUR BODY AND THE PLANET
-        </motion.p>
-      </div>     
+          data-name="leaf-right">
+          <img 
+            alt="" 
+            className="w-full h-auto" 
+            src="hero/Leaf_01.svg" 
+          />
+        </motion.div>
+      </motion.div>
+
+      {/* Hero Text */}
+      <motion.div 
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        className="absolute top-[12%] sm:top-[15%] md:top-[18%] lg:top-[20%] left-1/2 -translate-x-1/2 w-[90%] md:w-[80%] lg:w-[70%] max-w-[1442px] z-30">
+        <h1 className="font-['Athene_Voyage',_serif] text-[#27891f] text-center uppercase leading-tight">
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl mb-0">
+            Protein That Does
+          </p>
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+            More.
+          </p>
+        </h1>
+      </motion.div>
+
+      {/* Bottom Left Large Leaf - At bowl joint, animates from bottom */}
+      <motion.div 
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
+        className="absolute left-16 bottom-[8%] sm:left-20 md:left-24 w-[140px] sm:w-[180px] md:w-[220px] lg:w-[260px] z-0"
+        data-name="leaf2-left">
+        <motion.div
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
+          <img 
+            alt="" 
+            className="w-full h-auto" 
+            src="hero/leaf1.svg" 
+          />
+        </motion.div>
+      </motion.div>
+
+      {/* Bottom Right Large Leaf - At bowl joint, animates from bottom */}
+      <motion.div 
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
+        className="absolute right-16 bottom-[8%] sm:right-20 md:right-24 w-[140px] sm:w-[180px] md:w-[220px] lg:w-[260px] z-0"
+        data-name="leaf2-right">
+        <motion.div
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          className="scale-x-[-1]">
+          <img 
+            alt="" 
+            className="w-full h-auto" 
+            src="hero/leaf2.svg" 
+          />
+        </motion.div>
+      </motion.div>
+
+      {/* Hero bowl image - Touches bottom */}
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.9, y: 50 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[95%] sm:w-[90%] md:w-[85%] lg:w-[80%] xl:w-[75%] 2xl:w-[70%] max-w-[1267px] z-10"
+        data-name="hero-image">
+        <div className="relative w-full aspect-[3.12/1]">
+          <img 
+            alt="Bowl of Bhaji" 
+            className="w-full h-full object-contain object-bottom" 
+            src="hero/bhaji2.svg" 
+          />
+          
+          {/* Know More Button */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                       border-[2px] md:border-[3px] border-[#faf6c6] rounded-full
+                       px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20
+                       py-2 sm:py-3 md:py-4 lg:py-5 xl:py-6
+                       font-['Kumbh_Sans',_sans-serif] font-semibold text-[#faf6c6]
+                       text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl
+                       whitespace-nowrap
+                       hover:bg-[#faf6c6] hover:text-[#27891f] transition-colors duration-300">
+            Know More
+          </motion.button>
+        </div>
+      </motion.div>
     </div>
   );
 }
