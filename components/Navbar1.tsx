@@ -36,7 +36,7 @@ export default function Navbar() {
       <div className={`relative flex ${!mobileMenuOpen ? 'rounded-b-3xl' : ''} border-b border-[#27891F] items-center px-4 sm:px-6 md:px-8 py-3 sm:py-4 w-full mx-auto`}>
         
         {/* Desktop Navigation Links - Left */}
-        <div className="hidden md:flex space-x-6 lg:space-x-8 flex-none min-w-[120px]">
+        <div className="hidden md:flex space-x-6 lg:space-x-8 flex-1 justify-start">
           <AnimatePresence>
             {scrolled && (
               <motion.a
@@ -65,7 +65,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation Links - Right */}
-        <div className="hidden md:flex space-x-6 lg:space-x-8 flex-none min-w-[120px] justify-end">
+        <div className="hidden md:flex space-x-6 lg:space-x-8 flex-1 justify-end">
           <AnimatePresence>
             {scrolled && (
               <motion.a
