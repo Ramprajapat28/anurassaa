@@ -27,13 +27,13 @@ export default function WeCareSection() {
                 {/* Main heading - morphs smoothly */}
                 <motion.div
                     className="text-center px-2 sm:px-4 relative"
-                    style={{ 
+                    style={{
                         transform: 'translateZ(0)',
                         backfaceVisibility: 'hidden',
                         perspective: 1000
                     }}
                     initial={{ y: 100, opacity: 0 }}
-                    animate={{ 
+                    animate={{
                         y: isInView ? (showCards ? -50 : 100) : 100,
                         opacity: isInView ? 1 : 0
                     }}
@@ -59,7 +59,7 @@ export default function WeCareSection() {
                             alt="Leaf decoration"
                             width={368}
                             height={462}
-                            className="w-full h-auto"
+                            className="w-full h-auto opacity-50 sm:opacity-100"
                         />
                     </motion.div>
 
@@ -80,15 +80,16 @@ export default function WeCareSection() {
                             alt="Leaf decoration"
                             width={368}
                             height={462}
-                            className="w-full h-auto transform scale-x-[-1]"
+                            className="w-full h-auto transform scale-x-[-1] opacity-50 sm:opacity-100"
                         />
                     </motion.div>
 
+
                     <motion.h1
                         className="font-[var(--font-cabinet)] text-9xl text-[#1B5E20]"
-                        style={{ 
-                            display: 'flex', 
-                            flexDirection: 'column', 
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
                             alignItems: 'center',
                             transform: 'translateZ(0)'
                         }}
@@ -148,7 +149,7 @@ export default function WeCareSection() {
                             >
                                 {/* "YOU!" that fades out */}
                                 <motion.span
-                                    style={{ 
+                                    style={{
                                         position: showCards ? 'absolute' : 'relative',
                                         left: showCards ? '50%' : 'auto',
                                         transform: showCards ? 'translateX(-50%)' : 'none'
@@ -157,17 +158,17 @@ export default function WeCareSection() {
                                     animate={{
                                         opacity: showCards ? 0 : 1,
                                     }}
-                                    transition={{ 
+                                    transition={{
                                         duration: 0.6,
                                         ease: [0.25, 0.1, 0.25, 1]
                                     }}
                                 >
                                     YOU!
                                 </motion.span>
-                                
+
                                 {/* "We CARE about YOU!" that fades in at same position */}
                                 <motion.span
-                                    style={{ 
+                                    style={{
                                         position: showCards ? 'relative' : 'absolute',
                                         left: !showCards ? '50%' : 'auto',
                                         transform: !showCards ? 'translateX(-50%)' : 'none',
@@ -177,13 +178,13 @@ export default function WeCareSection() {
                                     animate={{
                                         opacity: showCards ? 1 : 0,
                                     }}
-                                    transition={{ 
+                                    transition={{
                                         duration: 0.8,
                                         delay: 0.5,
                                         ease: [0.25, 0.1, 0.25, 1]
                                     }}
                                 >
-                                    We CARE about   
+                                    We CARE about
                                     <span className="font-semibold ml-1 sm:ml-2 md:ml-3 lg:ml-4">
                                         YOU!
                                     </span>
@@ -211,26 +212,26 @@ export default function WeCareSection() {
                                 <motion.div
                                     key={index}
                                     className="relative group w-full"
-                                    style={{ 
+                                    style={{
                                         transform: 'translateZ(0)',
                                         backfaceVisibility: 'hidden'
                                     }}
-                                    initial={{ 
-                                        opacity: 0, 
+                                    initial={{
+                                        opacity: 0,
                                         y: 60,
                                         scale: 0.9
                                     }}
-                                    animate={{ 
-                                        opacity: 1, 
+                                    animate={{
+                                        opacity: 1,
                                         y: 0,
                                         scale: 1
                                     }}
-                                    transition={{ 
+                                    transition={{
                                         duration: 0.9,
                                         delay: 1 + (index * 0.2),
                                         ease: [0.25, 0.46, 0.45, 0.94]
                                     }}
-                                    whileHover={{ 
+                                    whileHover={{
                                         scale: 1.04,
                                         y: -6,
                                         transition: { duration: 0.2, ease: "easeOut" }
@@ -248,11 +249,11 @@ export default function WeCareSection() {
                                             style={{ transform: 'translateZ(0)' }}
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent pointer-events-none" />
-                                        <motion.h3 
+                                        <motion.h3
                                             className="absolute bottom-3 sm:bottom-5 left-2 sm:left-4 right-2 sm:right-4 text-white font-semibold text-center text-xs sm:text-sm md:text-base"
                                             initial={{ opacity: 0, y: 20 }}
                                             animate={{ opacity: 1, y: 0 }}
-                                            transition={{ 
+                                            transition={{
                                                 delay: 1.3 + (index * 0.2),
                                                 duration: 0.7,
                                                 ease: "easeOut"
