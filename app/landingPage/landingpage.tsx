@@ -14,25 +14,28 @@ export default function Page() {
 
       <Buildingblock />
 
-  <Content />
-
-
+      <Content />
 
       {/* Gradient Section Ends */}
- <div
-  className="bg-gradient-to-b
+      <div
+        className="bg-gradient-to-b
     from-[#C8E2B2] from-0%
     to-[#FEFAEF] to-100%
     bg-[length:100%_100%]
     bg-no-repeat"
->
-  <WeCareSection />
-</div>
+      >
+        <WeCareSection />
+      </div>
 
-  
+
       <Contact />
-    
+
       <Footer />
+      {/* <div className="bg-gradient-to-b from-[#FAF6C6]/80  via-[#0a260a]/80 via-[#0a260a]/80  to-[#0a260a] 
+                 bg-no-repeat">
+        <Contact />
+      </div> */}
+
     </div>
   );
 }
