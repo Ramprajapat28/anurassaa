@@ -149,7 +149,7 @@ export default function HeroSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+            className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2
                        border-[2px] md:border-[3px] border-[#faf6c6] rounded-full
                        px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20
                        py-2 sm:py-3 md:py-4 lg:py-5 xl:py-6
