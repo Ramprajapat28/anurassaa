@@ -41,7 +41,7 @@ export default function Navbar() {
             {scrolled && (
               <motion.a
                 href="#about"
-                className="text-[#27891F] transition-colors cursor-pointer text-lg lg:text-4xl"
+                className="text-[#27891F] transition-colors cursor-pointer text-lg lg:text-2xl xl:text-3xl"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -58,7 +58,7 @@ export default function Navbar() {
         {/* Logo - Center */}
         <div className="flex-1 left-0 right-0 flex justify-center w-fit mx-auto">
           <div
-            className="text-[#27891F] text-center text-[32px] md:text-4xl lg:text-5xl xl:text-7xl font-bold leading-tight cursor-pointer"
+            className="text-[#27891F] text-center text-[32px] md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight cursor-pointer"
           >
             Anurassaa
           </div>
@@ -70,7 +70,7 @@ export default function Navbar() {
             {scrolled && (
               <motion.a
                 href="#contact"
-                className="text-[#27891F] transition-colors cursor-pointer text-lg lg:text-4xl"
+                className="text-[#27891F] transition-colors cursor-pointer text-lg lg:text-2xl xl:text-3xl"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
