@@ -9,7 +9,6 @@ export default function Contact() {
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
-        mobile: '',
         message: '',
     });
     const [mounted, setMounted] = useState(false);
@@ -33,177 +32,153 @@ export default function Contact() {
 
     if (!mounted) {
         return (
-            <div id="contact" className="bg-[#0a260a] py-12 min-h-screen flex items-center justify-center">
+            <div id="contact" className="bg-[#2F4230] py-12 min-h-screen flex items-center justify-center">
                 <p className="text-white">Loading...</p>
             </div>
         );
     }
 
     return (
-        <div id="contact" className="bg-[#0a260a] py-16 sm:py-20 lg:py-24 min-h-screen flex items-center">
-            <div className="md:max-w-6xl lg:max-w-7xl  mx-auto px-6 sm:px-8 lg:px-12 w-full">
-                {/* Header - Centered at top */}
+        <div id="contact" className="bg-[#2F4230] min-h-screen lg:py-0 py-5 flex items-center justify-center">
+            <div className="max-w-[100%] xl:max-w-[95%] w-full">
                 <motion.div
-                    className="text-center mb-12 sm:mb-16 lg:mb-20"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    className="relative overflow-hidden"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    <div className="flex flex-col md:flex-row items-center md:items-start tracking-[0.5rem] xl:tracking-[0.8rem] ap-4 md:gap-10">
-                        {/* SIMPLIFY with underline */}
-                        <h1 className="relative text-left text-[45px] sm:text-6xl lg:text-8xl xl:text-[122.65px] font-['Kumbh_Sans'] mb-6 font-bold text-[#FAE951] leading-none">
-                            SIMPLIFY.
-                            <span className="absolute left-0 -bottom-2 w-full h-[3px]   bg-gradient-to-r from-[#E5903D] to-[#FFCE73]"></span>
-                        </h1>
+                    <div className="bg-[#2F4230] p-4 md:p-8">
+                        <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-stretch">
+                            {/* Left Panel - Form Section */}
+                            <motion.div
+                                className="bg-[#FAF6C6] rounded-2xl p-6 md:p-9 xl:p-10 flex flex-col justify-between"
+                                initial={{ opacity: 0, x: -50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                viewport={{ once: true }}
+                            >
+                                {/* Top Section - Form and Contact Info Side by Side */}
+                                <div className="flex flex-col xl:flex-row gap-10 xl:gap-20 pt-5">
+                                    {/* Form Inputs Section */}
+                                    <div className="flex-1">
+                                        <form onSubmit={handleSubmit} className="space-y-6">
+                                            {/* Full Name Input */}
+                                            <div>
+                                                <input
+                                                    type="text"
+                                                    name="fullName"
+                                                    placeholder="Full Name"
+                                                    value={formData.fullName}
+                                                    onChange={handleInputChange}
+                                                    className="w-full bg-transparent border-b-2 border-[#3a5144] font-cabinet px-0 py-2 text-[#174713]/80 placeholder-[#174713]/50 focus:outline-none focus:border-[#2a4134] transition-colors sm:text-md md:text-lg lg:text-xl font-light"
+                                                    required
+                                                    autoComplete="name"
+                                                />
+                                            </div>
 
-                        {/* RIGHT SIDE (YOUR DAILY above, NUTRITION below) */}
-                        <div className="flex flex-col text-center md:text-left">
-                            <span className="text-[22px] sm:text-3xl lg:text-4xl xl:text-5xl text-[#FAF6C6] font-['Kumbh_Sans'] font-semibold leading-tight">
-                                YOUR <span className=" decoration-2">DAILY</span>
-                            </span>
-                            <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-[#FAF6C6] font-bold">
-                                NUTRITION
-                            </span>
-                        </div>
-                    </div>
-                </motion.div>
+                                            {/* Email Input */}
+                                            <div>
+                                                <input
+                                                    type="email"
+                                                    name="email"
+                                                    placeholder="E-mail"
+                                                    value={formData.email}
+                                                    onChange={handleInputChange}
+                                                    className="w-full bg-transparent border-b-2 border-[#3a5144] font-cabinet px-0 py-2 text-[#174713]/80 placeholder-[#174713]/50 focus:outline-none focus:border-[#2a4134] transition-colors sm:text-md md:text-lg lg:text-xl font-light"
+                                                    required
+                                                    autoComplete="email"
+                                                />
+                                            </div>
 
-                {/* Main Content Grid */}
-                <div className=" grid md:grid-cols-2 lg:grid-cols-8 gap-6 md:gap-12  xl:gap-24 items-stretch">
-                    
-                    {/* Left Image Panel */}
-                    <motion.div
-                        className="md:col-span-1 group lg:col-span-3"
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                        whileHover={{ scale: 1.05 }}
+                                            {/* Message Input */}
+                                            <div>
+                                                <textarea
+                                                    name="message"
+                                                    placeholder="Message"
+                                                    value={formData.message}
+                                                    onChange={handleInputChange}
+                                                    rows={2}
+                                                    className="w-full bg-transparent border-b-2 border-[#3a5144] font-cabinet px-0 py-2 text-[#174713]/80 placeholder-[#174713]/50 focus:outline-none focus:border-[#2a4134] transition-colors resize-none sm:text-md md:text-lg lg:text-xl font-light"
+                                                    required
+                                                />
+                                            </div>
+                                        </form>
+                                    </div>
 
-                    >
-                        <div className="rounded-2xl overflow-hidden h-full md:h-2/3  lg:h-full lg:min-h-[400px]">
-                            <Image
-                                src="/contact/unsplash.svg"
-                               height={0}
-                                 width={0}
-                                alt="Protein powder being mixed"
-                                className="w-full  h-full object-fit group-hover:scale-110 transition-transform duration-500"
-                            />
-                        </div>
-                    </motion.div>
-
-                    {/* Right Contact Section */}
-                    <motion.div
-                        className="md:col-span-1 lg:col-span-5 lg:ml-16 "
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        viewport={{ once: true }}
-                    >
-                        <div className="h-full flex flex-col">
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 sm:mb-8 lg:mb-10 text-center lg:text-left ">
-                                CONTACT US
-                                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-gradient-to-r from-[#E5903D] to-[#FFCE73]"></span>
-                                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-gradient-to-r from-[#E5903D] to-[#FFCE73]"></span>
-                            </h2>
-                            
-                            <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 xl:gap-16 flex-1">
-                                {/* Form Section */}
-                                <div className="flex-1">
-                                    <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
-                                        {/* Full Name Input */}
-                                        <div>
-                                            <input
-                                                type="text"
-                                                name="fullName"
-                                                placeholder="Full Name"
-                                                value={formData.fullName}
-                                                onChange={handleInputChange}
-                                                className="w-full bg-transparent border-b-2 border-[#E5903D] px-0 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#FAE951] transition-colors text-base sm:text-lg lg:text-xl"
-                                                required
-                                                autoComplete="name"
-                                            />
+                                    {/* Contact & Based In Section - Right Column */}
+                                    <div className="flex flex-row xl:flex-col gap-10">
+                                        <div className="self-start">
+                                            <h4 className="font-bold text-[#174713]/80 font-cabinet mb-1 sm:text-md md:text-lg lg:text-2xl">Contact</h4>
+                                            <p className="text-[#174713]/70 font-athene sm:text-md md:text-lg lg:text-2xl">anurassa.com</p>
                                         </div>
-
-                                        {/* Email Input */}
-                                        <div>
-                                            <input
-                                                type="email"
-                                                name="email"
-                                                placeholder="E-mail"
-                                                value={formData.email}
-                                                onChange={handleInputChange}
-                                                className="w-full bg-transparent border-b-2 border-[#E5903D] px-0 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#FAE951] transition-colors text-base sm:text-lg lg:text-xl"
-                                                required
-                                                autoComplete="email"
-                                            />
-                                        </div>
-
-                                        {/* Mobile Input */}
-                                        <div>
-                                            <input
-                                                type="tel"
-                                                name="mobile"
-                                                placeholder="Mobile Number"
-                                                value={formData.mobile}
-                                                onChange={(e) => {
-                                                    const numericValue = e.target.value.replace(/\D/g, "");
-                                                    setFormData((prev) => ({ ...prev, mobile: numericValue }));
-                                                }}
-                                                className="w-full bg-transparent border-b-2 border-[#E5903D] px-0 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#FAE951] transition-colors text-base sm:text-lg lg:text-xl"
-                                                required
-                                                autoComplete="tel"
-                                                maxLength={10}
-                                            />
-                                        </div>
-
-                                        {/* Message Input */}
-                                        <div>
-                                            <textarea
-                                                name="message"
-                                                placeholder="Message"
-                                                value={formData.message}
-                                                onChange={handleInputChange}
-                                                rows={3}
-                                                className="w-full bg-transparent border-b-2 border-[#E5903D] px-0 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#FAE951] transition-colors resize-none text-base sm:text-lg lg:text-xl"
-                                                required
-                                            />
-                                        </div>
-
-                                        {/* Submit Button */}
-                                        <div className="pt-4">
-                                            <motion.button
-                                                type="submit"
-                                                className="bg-[#FAE951] text-[#0a260a] font-bold px-8 sm:px-12 py-3 sm:py-4 rounded-full text-base sm:text-lg lg:text-xl hover:bg-[#FAE951]/90 transition-all shadow-xl"
-                                                whileHover={{ scale: 1.07 }}
-                                                whileTap={{ scale: 0.95 }}
-                                            >
-                                                Contact Us
-                                            </motion.button>
-                                        </div>
-                                    </form>
-                                </div>
-
-                                {/* Contact Info - Right Side */}
-                                <div className="lg:w-48 xl:w-56 flex-shrink-0">
-                                    <div className="space-y-6 sm:space-y-8">
-                                        <div>
-                                            <h4 className="font-bold text-[#E5903D] mb-2 text-sm sm:text-lg lg:text-3xl">Contact</h4>
-                                            <p className="text-white text-sm sm:text-base">hi@green.com</p>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-[#E5903D] mb-2 text-sm sm:text-lg lg:text-3xl">Based in</h4>
-                                            <p className="text-white text-sm sm:text-base">
-                                                Los Angeles,<br />California
-                                            </p>
+                                        <div className="ml-auto self-end xl:ml-0 xl:self-auto">
+                                            <h4 className="font-bold text-[#174713]/80 font-cabinet mb-1 sm:text-md md:text-lg lg:text-2xl">Based in</h4>
+                                            <p className="text-[#174713]/70 font-athene sm:text-md md:text-lg lg:text-2xl">India</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+
+                                {/* Bottom Section - Logo and Icon */}
+                                <div className="flex items-center-safe gap-5 justify-between">
+                                    <h2 className="text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold text-[#3a5144] font-cabinet underline decoration-[2px] underline-offset-6">
+                                        Anurassaa
+                                    </h2>
+                                    {/* Mortar & Pestle Icon */}
+                                    {/* <div className="w-15 h-15 flex-shrink-0">
+                                        <svg viewBox="0 0 512 512" className="w-full h-full fill-[#3a5144]">
+                                            <path d="M504.3 11.1C493.3-1.6 474.5-3.7 461 6.2L252.3 160H397.3L502.6 54.6c11.8-11.8 12.6-30.8 1.6-43.5zM32 192c-17.7 0-32 14.3-32 32s14.3 32 32 32c0 82.5 43.4 147.7 123.9 176.2c-11.1 13.9-19.4 30.3-23.9 48.1C127.6 497.4 142.3 512 160 512H288c17.7 0 32.4-14.6 28-31.7c-4.5-17.8-12.8-34.1-23.9-48.1C372.6 403.7 416 338.5 416 256c17.7 0 32-14.3 32-32s-14.3-32-32-32H32z" />
+                                        </svg>
+                                    </div> */}
+
+                                    <div className="w-20 h-20 md:w-30 md:h-30 xl:w-50 xl:h-50  flex-shrink-0">
+                                        <Image
+                                            src="/contact/bowl.svg"
+                                            alt="Icon"
+                                            width={100}
+                                            height={100}
+                                            className="w-full h-full object-contain"
+                                        />
+                                    </div>
+                                </div>
+                            </motion.div>
+
+                            {/* Right Panel - Image & Text Section */}
+                            <motion.div
+                                className="flex flex-col gap-4"
+                                initial={{ opacity: 0, x: 50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, delay: 0.4 }}
+                                viewport={{ once: true }}
+                            >
+                                {/* Header Text */}
+                                <div className="text-center">
+                                    <h3 className="text-[#FEFAEF] text-lg md:text-xl lg:text-2xl font-cabinet mb-1 tracking-wide">
+                                        Your daily NUTRITION
+                                    </h3>
+                                    <h1 className="text-[#FAF6C6] text-4xl md:text-6xl lg:text-7xl font-athene tracking-wider leading-none">
+                                        SIMPLIFIED
+                                    </h1>
+                                </div>
+
+                                {/* Image */}
+                                <motion.div
+                                    className="rounded-2xl overflow-hidden w-full md:max-w-[18rem] lg:max-w-[22rem] mx-auto"
+                                    whileHover={{ scale: 1.02 }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    <Image
+                                        src="/contact/unsplash.svg"
+                                        height={500}
+                                        width={500}
+                                        alt="Protein powder being mixed"
+                                        className="w-full h-auto object-contain"
+                                    />
+                                </motion.div>
+                            </motion.div>
                         </div>
-                    </motion.div>
-                </div>
+                    </div>
+                </motion.div>
             </div>
         </div>
     );

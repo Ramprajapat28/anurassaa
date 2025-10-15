@@ -17,7 +17,7 @@ export default function Content() {
       bg-no-repeat">
 
       <div className="text-center mb-14">
-        <h1 className="text-4xl pt-12 font-[var(--font-cabinet)] md:text-5xl font-serif tracking-wide text-[#f5f5f5]">
+        <h1 className="text-4xl py-12 font-[var(--font-cabinet)] md:text-5xl font-serif tracking-wide text-[#f5f5f5]">
           Why Anurassa?
         </h1>
       </div>
