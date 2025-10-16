@@ -49,7 +49,7 @@ export default function Contact() {
                     viewport={{ once: true }}
                 >
                     <div className="bg-[#2F4230] p-4 md:p-8">
-                        <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-stretch">
+                        <div className="grid md:grid-cols-2 gap-8 lg:gap-16 2xl:max-w-[80%] mx-auto items-stretch">
                             {/* Left Panel - Form Section */}
                             <motion.div
                                 className="bg-[#FAF6C6] rounded-2xl p-6 md:p-9 xl:p-10 flex flex-col justify-between"
@@ -59,7 +59,7 @@ export default function Contact() {
                                 viewport={{ once: true }}
                             >
                                 {/* Top Section - Form and Contact Info Side by Side */}
-                                <div className="flex flex-col xl:flex-row gap-10 xl:gap-20 pt-5">
+                                <div className="flex flex-col xl:flex-row gap-10 xl:gap-20 pt-5   ">
                                     {/* Form Inputs Section */}
                                     <div className="flex-1">
                                         <form onSubmit={handleSubmit} className="space-y-6">
