@@ -19,7 +19,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, x: -100, y: -100 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-        className="absolute left-[-10px] top-12  sm:top-20  md:top-20 w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] z-20">
+        className="absolute left-[-10px] top-12  sm:top-20  md:top-14 lg:top-20 w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] z-20">
         <motion.div 
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -37,7 +37,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, x: 100, y: -100 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-        className="absolute right-[-1%] top-12 sm:top-20  md:top-20 w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] z-20">
+        className="absolute right-[-1%] top-12 sm:top-20  md:top-14 lg:top-20 w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] z-20">
         <motion.div 
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
@@ -75,14 +75,14 @@ export default function HeroSection() {
         transition={{ duration: 2, ease: "easeOut", delay: 1 }}
         className="
           absolute
-          bottom-[-4%]
+          bottom-[-6%]
           left-[8%]    /* mobile */
           sm:left-[12%]
-          md:left-[14%]
-          lg:left-[16%]
-          xl:left-[17%]
-          2xl:left-[17%]
-          w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[260px]
+          md:left-[-4%]
+          lg:left-[1%]
+          xl:left-[4%]
+          2xl:left-[14%]
+          w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[360px]
           z-0
         "
         data-name="leaf2-left"
@@ -108,11 +108,11 @@ export default function HeroSection() {
           bottom-[-2%]
           right-[8%]    /* mobile */
           sm:right-[12%]
-          md:right-[14%]
-          lg:right-[16%]
-          xl:right-[17%]
-          2xl:right-[17%]
-          w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[260px]
+          md:right-[-4%]
+          lg:right-[1%]
+          xl:right-[4%]
+          2xl:right-[14%]
+          w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[360px]
           z-0
         "
         data-name="leaf2-right"
