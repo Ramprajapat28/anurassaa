@@ -91,7 +91,7 @@ export default function HeroSection() {
           md:left-[-4%]
           lg:left-[1%]
           xl:left-[4%]
-          2xl:left-[14%]
+          2xl:left-[10%]
           w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[360px]
           z-0
         "
@@ -123,7 +123,7 @@ export default function HeroSection() {
           md:right-[-4%]
           lg:right-[1%]
           xl:right-[4%]
-          2xl:right-[14%]
+          2xl:right-[10%]
           w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[360px]
           z-0
         "
