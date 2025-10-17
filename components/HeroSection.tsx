@@ -89,9 +89,9 @@ export default function HeroSection() {
           left-[8%]    /* mobile */
           sm:left-[12%]
           md:left-[-4%]
-          lg:left-[1%]
-          xl:left-[4%]
-          2xl:left-[6%]
+          lg:left-[8%]
+          xl:left-[12%]
+          2xl:left-[10%]
           w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[360px]
           z-0
         "
@@ -121,9 +121,9 @@ export default function HeroSection() {
           right-[8%]    /* mobile */
           sm:right-[12%]
           md:right-[-4%]
-          lg:right-[1%]
-          xl:right-[4%]
-          2xl:right-[6%]
+          lg:right-[8%]
+          xl:right-[12%]
+          2xl:right-[10%]
           w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[360px]
           z-0
         "
@@ -148,7 +148,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, scale: 0.9, y: 50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-auto bg-cover  md:w-[85%] lg:w-[70%] xl:w-[70%] 2xl:w-[70%] rounded-t-[50%] max-w-[1267px] z-10"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-auto bg-cover  md:w-[85%] lg:w-[60%] rounded-t-[50%] max-w-[1200px] z-10"
         data-name="hero-image">
       
         <div className="relative w-full h-full bg-bottom bottom-0  bg-cover  aspect-[3.12/1] ">
