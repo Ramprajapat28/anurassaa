@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <div 
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-300 ${!mobileMenuOpen ? 'rounded-b-3xl' : ''}`}
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-3xl transition-all duration-300 ${!mobileMenuOpen ? 'rounded-b-3xl' : ''}`}
     >
       <div className={`absolute inset-0 ${!mobileMenuOpen ? 'rounded-b-3xl' : ''}`}>
         <Image
@@ -30,7 +30,7 @@ export default function Navbar() {
           alt="hero background" 
           className={`w-full opacity-40 h-full object-cover ${!mobileMenuOpen ? 'rounded-b-3xl' : ''}`}
         />
-        <div className={`absolute inset-0 bg-gradient-to-r from-[#FEFAEF] via-transparent to-[#FEFAEF]/80 ${!mobileMenuOpen ? 'rounded-b-3xl' : ''} border-b md:border-b-3 border-[#27891F]`} />
+        <div className={`absolute inset-0 bg-gradient-to-r from-[#FEFAEF] via-[#FEFAEF]/40 to-[#FEFAEF] ${!mobileMenuOpen ? 'rounded-b-3xl' : ''} border-b md:border-b-3 border-[#27891F]`} />
       </div>
 
       <div className={`relative flex ${!mobileMenuOpen ? 'rounded-b-3xl' : ''} border-b border-[#27891F] items-center px-4 sm:px-6 md:px-8 py-3 sm:py-4 w-full mx-auto`}>
