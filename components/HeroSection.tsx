@@ -148,7 +148,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, scale: 0.9, y: 50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-auto bg-cover  md:w-[85%] lg:w-[60%] xl:w-[50%] rounded-t-[50%] max-w-[1200px] z-10"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-auto bg-cover  md:w-[85%] lg:w-[65%] xl:w-[50%] rounded-t-[50%] max-w-[1200px] z-10"
         data-name="hero-image">
       
         <div className="relative w-full h-full bg-bottom bottom-0  bg-cover  aspect-[3.12/1] ">
