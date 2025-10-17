@@ -1,15 +1,19 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
     <div className="relative bg-[#fefaef] min-h-screen w-full overflow-hidden" data-name="Hero Section">
       {/* Background */}
       <div className="absolute inset-0 flex items-center justify-center" data-name="bg">
-        <img 
+        <Image
           src="hero/bg.svg"
           alt="" 
+          width={0}
+          height={0}
+          
           className="w-full h-full object-cover"
         />
       </div>
@@ -24,8 +28,10 @@ export default function HeroSection() {
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           data-name="leaf-left">
-          <img 
+          <Image
             alt="" 
+              width={0}
+          height={0}
             className="w-full h-auto" 
             src="hero/Leaf_02.svg" 
           />
@@ -43,8 +49,10 @@ export default function HeroSection() {
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
           
           data-name="leaf-right">
-          <img 
+          <Image
             alt="" 
+              width={0}
+          height={0}
             className="w-full h-auto" 
             src="hero/Leaf_01.svg" 
           />
@@ -92,8 +100,10 @@ export default function HeroSection() {
         <motion.div
           // animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
-          <img 
+          <Image
             alt="" 
+              width={0}
+          height={0}
             className="w-full h-auto" 
             src="hero/leaf1.svg" 
           />
@@ -123,8 +133,10 @@ export default function HeroSection() {
           // animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
         >
-          <img 
-            alt="" 
+          <Image
+            alt=""
+              width={0}
+          height={0} 
             className="w-full h-auto" 
             src="hero/leaf2.svg" 
           />
@@ -140,11 +152,12 @@ export default function HeroSection() {
         data-name="hero-image">
       
         <div className="relative w-full h-full bg-bottom bottom-0  bg-cover  aspect-[3.12/1] ">
-          <img 
+          <Image
             alt="Bowl of Bhaji" 
             // className="w-full h-full object-contain object-bottom"
             className="w-full h-full  bg-cover  bottom-0 object-contain  "
-         
+           width={0}
+          height={0}
             src="hero/bhaji2.svg" 
             // src="hero/image.jpg"
           />
