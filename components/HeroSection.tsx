@@ -89,9 +89,9 @@ export default function HeroSection() {
           left-[8%]    /* mobile */
           sm:left-[12%]
           md:left-[-4%]
-          lg:left-[10%]
-          xl:left-[14%]
-          2xl:left-[12%]
+          lg:left-[6%]
+          xl:left-[8%]
+          2xl:left-[8%]
           w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[360px]
           z-0
         "
