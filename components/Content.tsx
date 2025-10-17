@@ -54,7 +54,7 @@ export default function Content() {
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             >
               <motion.h2
-                className="text-3xl xs:text-4xl md:text-center sm:text-5xl lg:text-6xl underline decoration-[1px] underline-offset-4 font-athene font-medium text-[#FEFAEF] mb-2 sm:mb-3 lg:mb-4"
+                className="text-3xl xs:text-4xl text-center sm:text-5xl lg:text-6xl underline decoration-[1px] underline-offset-4 font-athene font-medium text-[#FEFAEF] mb-2 sm:mb-3 lg:mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -62,7 +62,7 @@ export default function Content() {
                 FERMENTED
               </motion.h2>
               <motion.p
-                className="text-xl xs:text-xl md:text-center sm:text-3xl font-cabinet font-bold mb-4 sm:mb-6 lg:mb-3 text-[#bbe1a3]"
+                className="text-xl xs:text-xl text-center sm:text-3xl font-cabinet font-bold mb-4 sm:mb-6 lg:mb-3 text-[#bbe1a3]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
@@ -75,17 +75,17 @@ export default function Content() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28">
+                <div className="relative w-24 h-24 md:w-24 md:h-24 lg:w-28 lg:h-28">
                   <Image
                     src={"/content/balls.svg"}
                     fill
                     alt="Stomach icon"
-                    className="object-contain"
+                    className="object-contain h-full w-full"
                   />
                 </div>
               </motion.div>
               <motion.p
-                className="text-base sm:text-xl md:text-2xl font-cabinet md:text-center text-[#FEFAEF] leading-relaxed mb-4 lg:mb-6"
+                className="text-base sm:text-xl md:text-2xl font-cabinet text-center text-[#FEFAEF] leading-relaxed mb-4 lg:mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
@@ -130,7 +130,7 @@ export default function Content() {
               <motion.h2
                 className="
     text-3xl sm:text-4xl md:text-5xl lg:text-6xl
-    md:text-center
+    text-center
     font-athene font-medium
     text-[#174713]
     underline decoration-[1px] underline-offset-4
@@ -144,7 +144,7 @@ export default function Content() {
               </motion.h2>
 
               <motion.p
-                className="text-lg xs:text-xl sm:text-2xl md:text-center text-[#27891F] font-cabinet font-bold mb-4 sm:mb-6 lg:mb-4"
+                className="text-lg xs:text-xl sm:text-2xl text-center text-[#27891F] font-cabinet font-bold mb-4 sm:mb-6 lg:mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -158,7 +158,7 @@ export default function Content() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28">
+                <div className="relative w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28">
                   <Image
                     src={"/content/stomach.svg"}
                     fill
@@ -169,7 +169,7 @@ export default function Content() {
               </motion.div>
 
               <motion.p
-                className="text-base md:text-center text-[#174713] sm:text-lg md:text-2xl font-cabinet leading-relaxed mb-4 lg:mb-6"
+                className="text-base text-center text-[#174713] sm:text-lg md:text-2xl font-cabinet leading-relaxed mb-4 lg:mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
