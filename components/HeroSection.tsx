@@ -91,7 +91,7 @@ export default function HeroSection() {
           md:left-[-4%]
           lg:left-[6%]
           xl:left-[9%]
-          2xl:left-[10%]
+          2xl:left-[12%]
           w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[360px]
           z-0
         "
@@ -123,7 +123,7 @@ export default function HeroSection() {
           md:right-[-4%]
           lg:right-[6%]
           xl:right-[9%]
-          2xl:right-[10%]
+          2xl:right-[12%]
           w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[360px]
           z-0
         "
@@ -148,7 +148,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, scale: 0.9, y: 50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-auto bg-cover  md:w-[85%] lg:w-[60%] xl:w-[55%] rounded-t-[50%] max-w-[1200px] z-10"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-auto bg-cover  md:w-[85%] lg:w-[60%] xl:w-[50%] rounded-t-[50%] max-w-[1200px] z-10"
         data-name="hero-image">
       
         <div className="relative w-full h-full bg-bottom bottom-0  bg-cover  aspect-[3.12/1] ">
