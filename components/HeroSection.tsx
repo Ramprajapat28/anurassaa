@@ -75,7 +75,9 @@ export default function HeroSection() {
         transition={{ duration: 2, ease: "easeOut", delay: 1 }}
         className="
           absolute
-          bottom-[-6%]
+          bottom-[-4%]
+          lg:bottom-[-6%]
+
           left-[8%]    /* mobile */
           sm:left-[12%]
           md:left-[-4%]
@@ -134,15 +136,17 @@ export default function HeroSection() {
         initial={{ opacity: 0, scale: 0.9, y: 50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-auto md:w-[85%] lg:w-[70%] xl:w-[70%] 2xl:w-[70%] max-w-[1267px] z-10"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-auto bg-cover  md:w-[85%] lg:w-[70%] xl:w-[70%] 2xl:w-[70%] rounded-t-[50%] max-w-[1267px] z-10"
         data-name="hero-image">
-        <div className="relative w-full aspect-[3.12/1]">
+      
+        <div className="relative w-full h-full bg-bottom bottom-0  bg-cover  aspect-[3.12/1] ">
           <img 
             alt="Bowl of Bhaji" 
             // className="w-full h-full object-contain object-bottom"
-            className="w-full h-full object-cover md:object-contain lg:object-cover "
+            className="w-full h-full  bg-cover  bottom-0 object-contain  "
          
             src="hero/bhaji2.svg" 
+            // src="hero/image.jpg"
           />
           
           {/* Know More Button */}
