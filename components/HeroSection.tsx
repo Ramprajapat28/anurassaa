@@ -89,10 +89,10 @@ export default function HeroSection() {
           left-[8%]    /* mobile */
           sm:left-[12%]
           md:left-[-4%]
-          lg:left-[6%]
-          xl:left-[9%]
-          2xl:left-[12%]
-          w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[360px]
+          lg:left-[7%]
+          xl:left-[10%]
+          2xl:left-[13%]
+          w-[100px] sm:w-[140px] md:w-[180px] lg:w-[200px] xl:w-[220px] 2xl:w-[300px]
           z-0
         "
         data-name="leaf2-left"
@@ -124,7 +124,7 @@ export default function HeroSection() {
           lg:right-[6%]
           xl:right-[9%]
           2xl:right-[12%]
-          w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[360px]
+          w-[100px] sm:w-[140px] md:w-[180px] lg:w-[200px] xl:w-[220px] 2xl:w-[300px]
           z-0
         "
         data-name="leaf2-right"
