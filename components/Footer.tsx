@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#F8F887] py-16">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="grid md:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-4 gap-8 mr-4">
           <div>
             <h4 className="text-[#0a260a] font-semibold text-xl xl:text-2xl mb-4">
               Learn More
@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[#0a260a] font-semibold xl:text-2xl mb-4">
+            <h4 className="text-[#0a260a] font-semibold text-xl xl:text-2xl mb-4">
               Who We are
             </h4>
             <div className="space-y-2 text-[#0a260a]">
@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[#0a260a] font-semibold xl:text-2xl mb-4">
+            <h4 className="text-[#0a260a] font-semibold text-xl xl:text-2xl mb-4">
               Support
             </h4>
             <div className="space-y-2 text-[#0a260a]">
