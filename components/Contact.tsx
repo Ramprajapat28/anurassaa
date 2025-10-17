@@ -39,7 +39,7 @@ export default function Contact() {
     }
 
     return (
-        <div id="contact" className="bg-[#2F4230] min-h-screen lg:py-0 py-5 flex items-center justify-center">
+        <div id="contact" className="bg-[#2F4230] min-h-screen lg:py-0 py-5 lg:py-16 flex items-center justify-center">
             <div className="max-w-[100%] xl:max-w-[95%] w-full">
                 <motion.div
                     className="relative overflow-hidden"
@@ -50,6 +50,40 @@ export default function Contact() {
                 >
                     <div className="bg-[#2F4230] p-4 md:p-8">
                         <div className="grid md:grid-cols-2 gap-8 lg:gap-16 2xl:max-w-[80%] mx-auto items-stretch">
+
+                            {/* Right Panel - Image & Text Section */}
+                            <motion.div
+                                className="flex flex-col gap-4"
+                                initial={{ opacity: 0, x: 50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, delay: 0.4 }}
+                                viewport={{ once: true }}
+                            >
+                                {/* Header Text */}
+                                <div className="text-center">
+                                    <h3 className="text-[#FEFAEF] text-lg md:text-xl lg:text-2xl font-cabinet mb-1 tracking-wide">
+                                        Your daily NUTRITION
+                                    </h3>
+                                    <h1 className="text-[#FAF6C6] text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-athene tracking-wider leading-none">
+                                        SIMPLIFIED
+                                    </h1>
+                                </div>
+
+                                {/* Image */}
+                                <motion.div
+                                    className="rounded-2xl overflow-hidden w-full md:max-w-[18rem] lg:max-w-[20rem] xl:max-w-[26rem] mx-auto"
+                                    whileHover={{ scale: 1.02 }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    <Image
+                                        src="/contact/unsplash.svg"
+                                        height={0}
+                                        width={0}
+                                        alt="Protein powder being mixed"
+                                        className="w-full h-auto object-contain"
+                                    />
+                                </motion.div>
+                            </motion.div>
                             {/* Left Panel - Form Section */}
                             <motion.div
                                 className="bg-[#FAF6C6] rounded-2xl p-6 md:p-9 xl:p-10 flex flex-col justify-between"
@@ -143,39 +177,7 @@ export default function Contact() {
                                 </div>
                             </motion.div>
 
-                            {/* Right Panel - Image & Text Section */}
-                            <motion.div
-                                className="flex flex-col gap-4"
-                                initial={{ opacity: 0, x: 50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.8, delay: 0.4 }}
-                                viewport={{ once: true }}
-                            >
-                                {/* Header Text */}
-                                <div className="text-center">
-                                    <h3 className="text-[#FEFAEF] text-lg md:text-xl lg:text-2xl font-cabinet mb-1 tracking-wide">
-                                        Your daily NUTRITION
-                                    </h3>
-                                    <h1 className="text-[#FAF6C6] text-4xl md:text-6xl lg:text-7xl font-athene tracking-wider leading-none">
-                                        SIMPLIFIED
-                                    </h1>
-                                </div>
-
-                                {/* Image */}
-                                <motion.div
-                                    className="rounded-2xl overflow-hidden w-full md:max-w-[18rem] lg:max-w-[22rem] mx-auto"
-                                    whileHover={{ scale: 1.02 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <Image
-                                        src="/contact/unsplash.svg"
-                                        height={500}
-                                        width={500}
-                                        alt="Protein powder being mixed"
-                                        className="w-full h-auto object-contain"
-                                    />
-                                </motion.div>
-                            </motion.div>
+                            
                         </div>
                     </div>
                 </motion.div>
