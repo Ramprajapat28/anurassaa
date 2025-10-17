@@ -90,8 +90,8 @@ export default function HeroSection() {
           sm:left-[12%]
           md:left-[-4%]
           lg:left-[6%]
-          xl:left-[8%]
-          2xl:left-[8%]
+          xl:left-[9%]
+          2xl:left-[10%]
           w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[360px]
           z-0
         "
@@ -121,9 +121,9 @@ export default function HeroSection() {
           right-[8%]    /* mobile */
           sm:right-[12%]
           md:right-[-4%]
-          lg:right-[10%]
-          xl:right-[14%]
-          2xl:right-[12%]
+          lg:right-[6%]
+          xl:right-[9%]
+          2xl:right-[10%]
           w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px] 2xl:w-[360px]
           z-0
         "
