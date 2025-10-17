@@ -71,7 +71,7 @@ export default function Contact() {
 
                                 {/* Image */}
                                 <motion.div
-                                    className="rounded-2xl overflow-hidden w-full md:max-w-[18rem] lg:max-w-[20rem] xl:max-w-[26rem] mx-auto"
+                                    className="rounded-2xl overflow-hidden w-full md:max-w-[18rem] lg:max-w-[20rem] xl:max-w-[23rem] mx-auto"
                                     whileHover={{ scale: 1.02 }}
                                     transition={{ duration: 0.3 }}
                                 >
