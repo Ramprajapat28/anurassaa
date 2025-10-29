@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Content() {
   return (
     <div className="bg-gradient-to-b
-      from-[#2F4230] from-0%
+      from-[#2F4230] from-5%
       via-[#2F4230] via-20%
       via-[#374C37] via-35%
       via-[#485F45] via-45%

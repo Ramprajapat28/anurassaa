@@ -39,7 +39,7 @@ export default function Contact() {
     }
 
     return (
-        <div id="contact" className="bg-[#2F4230] min-h-screen lg:py-0 py-5 lg:py-16 flex items-center justify-center">
+        <div id="contact" className="bg-[#2F4230] min-h-screen py-5 lg:py-16 flex items-center justify-center">
             <div className="max-w-[100%] xl:max-w-[95%] w-full">
                 <motion.div
                     className="relative overflow-hidden"
