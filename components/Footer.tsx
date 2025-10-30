@@ -31,7 +31,7 @@ export default function Footer() {
               Support
             </h4>
             <div className="space-y-2 text-[#0a260a]">
-              <p className="cursor-pointer hover-underline lg:text-xl">Contact Us</p>
+              <Link href="/#contact"><p className="cursor-pointer hover-underline lg:text-xl">Contact Us</p></Link>
               <p className="cursor-pointer hover-underline lg:text-xl">FAQ</p>
               <p className="cursor-pointer hover-underline lg:text-xl">Privacy Policy</p>
               <p className="cursor-pointer hover-underline lg:text-xl">
