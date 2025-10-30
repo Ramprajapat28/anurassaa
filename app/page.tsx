@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from "react";
 import LandingPage from "./landingPage/landingpage";
-import AboutUs from "./aboutPage/aboutUs";
+import AboutUs from "./aboutPage/page";
 
 export default function Home() {
   const [showAbout, setShowAbout] = useState(false);

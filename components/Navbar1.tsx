@@ -40,7 +40,7 @@ export default function Navbar() {
           <AnimatePresence>
             {scrolled && (
               <motion.a
-                href="#about"
+                href="/aboutPage"
                 className="text-[#27891F] transition-colors cursor-pointer text-lg lg:text-2xl xl:text-3xl"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -113,7 +113,7 @@ export default function Navbar() {
           >
             <div className="flex flex-col rounded-b-xl border-b border-[#27891F] space-y-4 py-6">
               <motion.a
-                href="#about"
+                 href="/aboutPage"
                 className="text-[#27891F] transition-colors border-b border-[#27891F] pb-4 cursor-pointer px-6 text-lg"
                 onClick={() => setMobileMenuOpen(false)}
                 whileTap={{ scale: 0.95 }}
