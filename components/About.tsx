@@ -67,20 +67,7 @@ export default function About() {
       <div className=" flex justify-end items-end w-full h-full mx-[4%] ">
       <div className="relative max-w-lg md:max-w-3xl lg:max-w-4xl 2xl:max-w-6xl h-[60vh] mx-auto px-8 pt-14 bg-[#fefaef] rounded-t-[36px] border-[2.5px] border-[#27891F] shadow-lg flex flex-col   z-30">
         {/* Decorative Leaves Inside Card, bottom left/right */}
-        {/* <Image
-          src="/hero/CardLeafLeft.svg"
-          alt=""
-          width={65}
-          height={70}
-          className="absolute left-[-28px] bottom-[-28px] hidden lg:block"
-        /> */}
-        {/* <Image
-          src="/hero/CardLeafRight.svg"
-          alt=""
-          width={65}
-          height={70}
-          className="absolute right-[-28px] bottom-[-28px] hidden lg:block"
-        /> */}
+        
         {/* Title */}
           <motion.div
         initial={{ opacity: 0, x: -20, y: 100 }}
@@ -101,7 +88,7 @@ export default function About() {
         initial={{ opacity: 0, x: 20, y: 100 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 2, ease: "easeOut", delay: 1 }}
-        className="absolute bottom-[-6%] lg:bottom-[-8%] right-[-9%] md:right-[-7%] w-[150px] md:w-[180px] lg:w-[200px] xl:w-[220px] 2xl:w-[300px] "
+        className="absolute bottom-[-6%] lg:bottom-[-8%] xl:bottom-[-10%] right-[-9%] md:right-[-7%]  w-[150px] md:w-[180px] lg:w-[200px] xl:w-[220px] 2xl:w-[300px] "
       >
         <Image
           src="/hero/leaf1.svg"
