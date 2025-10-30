@@ -73,7 +73,7 @@ export default function About() {
         initial={{ opacity: 0, x: -20, y: 100 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 2, ease: "easeOut", delay: 1 }}
-        className="absolute bottom-[-4%]  lg:bottom-[-4%] left-[-9%]  md:left-[-7%]  w-[150px] md:w-[180px] lg:w-[200px] xl:w-[220px] 2xl:w-[300px] z-0"
+        className="absolute bottom-[-4%]  lg:bottom-[-4%] left-[-9%]  md:left-[-7%]  w-[150px] md:w-[200px] lg:w-[220px] xl:w-[240px] 2xl:w-[300px] z-0"
       >
         <Image
           src="/hero/leaf2.svg"
@@ -88,7 +88,7 @@ export default function About() {
         initial={{ opacity: 0, x: 20, y: 100 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 2, ease: "easeOut", delay: 1 }}
-        className="absolute bottom-[-6%] lg:bottom-[-8%] xl:bottom-[-10%] right-[-9%] md:right-[-7%]  w-[150px] md:w-[180px] lg:w-[200px] xl:w-[220px] 2xl:w-[300px] "
+        className="absolute bottom-[-6%] lg:bottom-[-8%] xl:bottom-[-10%] right-[-9%] md:right-[-7%]  w-[150px] md:w-[200px] lg:w-[220px] xl:w-[240px] 2xl:w-[300px] "
       >
         <Image
           src="/hero/leaf1.svg"
