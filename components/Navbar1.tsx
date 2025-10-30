@@ -105,7 +105,7 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileMenuOpen && scrolled && (
           <motion.div
-            className="md:hidden absolute top-full z-50 left-0 right-0 bg-[#FEFAEF]/80 rounded-b-xl backdrop-blur-xl border-t border-[#27891F]"
+            className="md:hidden absolute top-full z-50 left-0 right-0 bg-[#FEFAEF]/90 rounded-b-xl backdrop-blur-7xl border-t border-[#27891F]"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
